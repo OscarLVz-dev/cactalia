@@ -2,10 +2,10 @@
 @import "/src/assets/scss/fonts.scss";
 
 footer {
-    background-color: $black;
+    background-color: $purple;
 
     * {
-        font-family: $font-base;
+        font-family: $body;
     }
 }
 
@@ -16,11 +16,12 @@ footer {
     padding: 20px 0;
 
     .copyright {
-        font-size: 13px;
+        font-size: 23px;
         .navbar-brand{
             font-weight: 800;
             display: flex;
             align-items: center;
+            color: $white;
     
             img{
                 margin-right: 5px;
@@ -28,10 +29,6 @@ footer {
                 width: 20px;
                 height: 18px;
             }
-        }
-
-        a:hover{
-            color: $gray-light;
         }
     }
 }
