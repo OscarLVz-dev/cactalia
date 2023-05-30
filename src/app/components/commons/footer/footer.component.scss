@@ -10,9 +10,6 @@ footer {
 }
 
 .footer-bottom {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     padding: 20px 0;
 
     .copyright {
@@ -33,7 +30,7 @@ footer {
     }
 
     .autor {
-        font-size: 23px;
+        font-size: 19px;
         .text{
             font-weight: 400;
             color: $white;
