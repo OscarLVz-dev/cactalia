@@ -1,0 +1,111 @@
+@import "/src/assets/scss/colors.scss";
+@import "/src/assets/scss/fonts.scss";
+
+.project-card{
+    padding: 0;
+    .project-header{
+        background: $gray;
+        width: 100%;
+        height: 300px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        border-radius: 15px 15px 0 0;
+
+        .client-logo {
+            width: 80%;
+        }
+    }
+    .project-content{
+        background: $gray;
+        padding: 15px 30px !important;
+
+        .title{
+            a{
+                font-weight: 700;
+                color: white;
+            }
+        }
+    }
+
+    .project-footer{
+        background: $gray;
+        border-radius: 0 0 15px 15px;
+        padding-bottom: 20px !important;
+        a{
+            width: 100%;
+        }
+        button{
+            width: 90%;
+            font-family: $font-primary;
+        }
+    }
+}
+
+.cactalia{
+    .project-header{
+        background-image: url("/assets/img/clients/cactalia_page.png");
+
+        .client-logo {
+            width: 60%;
+        }
+    }
+
+    .project-content{
+        .title{
+            span{
+                color: $lilac;
+            }
+        }
+    }
+
+    .project-footer{
+        button{
+            background: $pink;
+        }
+
+        button:after{
+            box-shadow: inset -4px -4px $pink-dark;
+        }
+    }
+}
+
+.mikecoach{
+    .project-header{
+        background-image: url("/assets/img/clients/mc_page.png");
+
+        .client-logo {
+            width: 80%;
+        }
+    }
+
+    .project-content{
+        .title{
+            span{
+                color: $red;
+            }
+        }
+    }
+
+    .project-footer{
+        button{
+            background: $red;
+        }
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section {
+        margin: 12px !important;
+    }
+
+    .full{
+        margin: 0px !important;
+    }
+
+    .project-card{
+        .project-header{
+            max-height: 230px;
+        }
+    }
+}

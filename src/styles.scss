@@ -1,0 +1,59 @@
+//NES Styles
+@import "/node_modules/nes.css/css/nes.css";
+
+//Icons
+@import "./assets/fontawesome/scss/fontawesome.scss";
+@import "./assets/fontawesome/scss/solid.scss";
+@import "./assets/fontawesome/scss/brands.scss";
+@import "./assets/fontawesome/scss/regular.scss";
+$fa-font-path: "./assets/fontawesome/webfonts";
+
+//Fonts
+@import "./assets/scss/fonts.scss";
+
+//Colors
+@import "./assets/scss/colors.scss";
+
+//Loaders
+@import "./assets/scss/preloader.scss";
+@import "./assets/scss/widgetLoader.scss";
+
+* {
+    font-family: $font-base;
+    color: white;
+}
+
+body {
+    background: $pink-light;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.center {
+    text-align: center;
+}
+
+.center-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.h-100{
+    height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-primary;
+}
+
+p {
+    font-size: 17px;
+}

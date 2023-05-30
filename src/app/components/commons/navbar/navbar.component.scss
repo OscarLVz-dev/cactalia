@@ -1,0 +1,40 @@
+@import "/src/assets/scss/colors.scss";
+
+.logo {
+    width: 40px;
+    margin-right: 5px;
+}
+
+.logo_name {
+    max-width: 10%;
+}
+
+@media (max-width: 992px) {
+    .logo {
+        margin-left: 10px;
+    }
+
+    .logo_name {
+        max-width: 17%;
+    }
+}
+
+@media (max-width: 518px) {
+    .navbar-brand {
+        font-size: 13px;
+    }
+
+    .logo_name {
+        max-width: 24%;
+    }
+}
+
+@media (max-width: 470px) {
+    .navbar-brand {
+        font-size: 12px;
+    }
+
+    .logo_name {
+        max-width: 24%;
+    }
+}
