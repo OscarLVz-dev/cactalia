@@ -19,7 +19,7 @@ $fa-font-path: "./assets/fontawesome/webfonts";
 @import "./assets/scss/widgetLoader.scss";
 
 * {
-    font-family: $body;
+    font-family: $font-body;
     color: white;
 }
 
@@ -51,7 +51,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $title;
+    font-family: $font-title;
 }
 
 p {
