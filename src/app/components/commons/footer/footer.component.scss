@@ -2,7 +2,7 @@
 @import "/src/assets/scss/fonts.scss";
 
 footer {
-    background-color: $purple;
+    background-color: $pink-dark;
 
     * {
         font-family: $body;
@@ -28,6 +28,18 @@ footer {
                 margin-left: 5px;
                 width: 20px;
                 height: 18px;
+            }
+        }
+    }
+
+    .autor {
+        font-size: 23px;
+        .text{
+            font-weight: 400;
+            color: $white;
+
+            .url{
+                font-weight: 800;
             }
         }
     }
