@@ -1,12 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;600;700;800;900&display=swap');
-
 @font-face {
     font-family: Letters_for_Learners;
     src: url("../fonts/Letters_for_Learners.ttf") format("opentype");
 }
 
-$font-primary: 'Press Start 2P', sans-serif;
-$font-base: 'Red Hat Display', sans-serif;
+@font-face {
+    font-family: The_Gloves;
+    src: url("../fonts/The_Gloves.otf") format("opentype");
+}
 
-$body: 'Letters_for_Learners', sans-serif;
+@font-face {
+    font-family: Donuts_Cookies;
+    src: url("../fonts/Donuts_Cookies.otf") format("opentype");
+}
+
+$font-body: 'Letters_for_Learners', sans-serif;
+$font-title: 'The_Gloves', sans-serif;
+$font-subtitle: 'Donuts_Cookies', sans-serif;
