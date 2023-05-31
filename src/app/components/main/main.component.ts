@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Clipboard } from '@angular/cdk/clipboard';
 import iziToast from 'izitoast';
+import { PayData } from 'src/app/constants/PayData';
 
 @Component({
   selector: 'main-component',
@@ -9,17 +10,19 @@ import iziToast from 'izitoast';
 })
 export class MainComponent {
 
+  public PayDataEnum = PayData;
+
   constructor(private clipboard: Clipboard) { }
 
   /**
    * Copy text to clipboard
    * @param text text to copy
    */
-  copyText(text: string) {
-    if (this.clipboard.copy(text)) {
+  copyText(payData: PayData) {
+    if (this.clipboard.copy(payData.value)) {
       iziToast.success({
         title: '¡Exito!',
-        message: 'Texto copiado.',
+        message: payData.displayName+' copiada.',
       });
     } else {
       iziToast.error({
