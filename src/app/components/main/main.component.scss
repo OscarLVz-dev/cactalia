@@ -16,10 +16,23 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
+
+        .presentation_card {
+            background: white;
+            width: 30%;
+            height: 240px;
+            margin: auto;
+            position: absolute;
+            top: 150px;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
     }
-    
-    .actions{
+
+    .actions {
         text-align: center;
+        margin-top: 140px;
     }
 }
 
@@ -28,7 +41,7 @@
     border: none;
     overflow: hidden;
     padding: 25px 25px 30px 25px;
-    
+
     h2 {
         z-index: 1;
         text-align: center;
@@ -45,16 +58,17 @@
         margin: 0;
     }
 
-    ul{
+    ul {
         z-index: 1;
         margin: 0px;
         padding: 0px 0px 0px 10px;
+
         li {
             color: $gray;
             font-size: 22px;
             list-style: none;
 
-            .data{
+            .data {
                 display: flex;
                 justify-content: space-between;
 
@@ -62,11 +76,11 @@
                     color: $gray;
                     margin-right: 20px;
                 }
-        
+
                 button {
                     border: 1px solid $gray;
                     background: white;
-        
+
                     i {
                         color: $gray;
                     }
@@ -74,7 +88,7 @@
 
                 button:hover {
                     border: 1px solid $pink-dark;
-        
+
                     i {
                         color: $pink-dark;
                     }
@@ -89,19 +103,19 @@
         }
     }
 
-    .resource{
+    .resource {
         position: absolute;
         z-index: 0;
     }
 
-    .r1{
-        width:25%;
+    .r1 {
+        width: 25%;
         top: 10px;
         right: -25px;
     }
 
-    .r2{
-        width:35%;
+    .r2 {
+        width: 35%;
         bottom: -40px;
         right: 80px;
     }
