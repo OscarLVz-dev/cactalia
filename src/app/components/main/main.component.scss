@@ -14,10 +14,21 @@
     .logo {
         width: 50%;
         margin: auto;
-        position: absolute;
-        top: 10%;
-        left: 0;
-        right: 0;
+    }
+
+    .by{
+        text-align: center;
+        a{
+            font-size: 20px;
+            font-family: $font-subtitle;
+            text-align: center;
+            color: $pink-dark;
+        }
+
+        a:hover{
+            color: $pink;
+        }
+
     }
 }
 
