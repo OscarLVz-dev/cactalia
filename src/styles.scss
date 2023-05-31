@@ -18,6 +18,9 @@ $fa-font-path: "./assets/fontawesome/webfonts";
 @import "./assets/scss/preloader.scss";
 @import "./assets/scss/widgetLoader.scss";
 
+//IziToast
+@import "./assets/scss/iziToast.scss";
+
 * {
     font-family: $font-body;
     color: white;
