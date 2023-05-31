@@ -1,6 +1,26 @@
 @import "/src/assets/scss/colors.scss";
 @import "/src/assets/scss/fonts.scss";
 
+.presentation-card {
+    background: white;
+    width: 85%;
+    max-width: 450px;
+    height: 240px;
+    position: relative;
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    .logo {
+        width: 50%;
+        margin: auto;
+        position: absolute;
+        top: 10%;
+        left: 0;
+        right: 0;
+    }
+}
+
 .main-card {
     background: white;
     border-radius: 15px;
@@ -16,18 +36,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
-
-        .presentation_card {
-            background: white;
-            width: 30%;
-            height: 240px;
-            margin: auto;
-            position: absolute;
-            top: 150px;
-            left: 0;
-            bottom: 0;
-            right: 0;
-        }
     }
 
     .actions {
