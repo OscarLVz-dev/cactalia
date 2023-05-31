@@ -59,9 +59,11 @@
 
 .clabes-card {
     border: none;
+    overflow: hidden;
     padding: 25px 25px 30px 25px;
-
+    
     h2 {
+        z-index: 1;
         text-align: center;
         color: $green-dark;
         font-size: 40px;
@@ -69,6 +71,7 @@
     }
 
     h3 {
+        z-index: 1;
         font-family: $font-body;
         font-size: 25px;
         color: $purple;
@@ -76,6 +79,7 @@
     }
 
     ul{
+        z-index: 1;
         margin: 0px;
         padding: 0px 0px 0px 10px;
         li {
@@ -94,6 +98,7 @@
         
                 button {
                     border: 1px solid $gray;
+                    background: white;
         
                     i {
                         color: $gray;
@@ -117,7 +122,22 @@
         }
     }
 
+    .resource{
+        position: absolute;
+        z-index: 0;
+    }
 
+    .r1{
+        width:25%;
+        top: 10px;
+        right: -25px;
+    }
+
+    .r2{
+        width:35%;
+        bottom: -40px;
+        right: 80px;
+    }
 }
 
 @media only screen and (max-width: 576px) {
