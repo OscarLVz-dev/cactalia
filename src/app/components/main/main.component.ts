@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
+  /**
+   * Copy text to clipboard
+   * @param text text to copy
+   */
+  copyText(text:string){
+  }
+
 }
