@@ -1,23 +1,28 @@
 @import "/src/assets/scss/colors.scss";
 @import "/src/assets/scss/fonts.scss";
 
-.user-data-card {
+.main-card {
     background: white;
     border-radius: 15px;
+
+    .image-bar {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 300px;
+        max-height: 300px;
+        border-radius: 15px 15px 0 0;
+        background-image: url("/assets/img/bar.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+    
+    .actions{
+        text-align: center;
+    }
 }
 
-.image-bar {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 300px;
-    max-height: 300px;
-    border-radius: 15px 15px 0 0;
-    background-image: url("/assets/img/bar.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: top;
-}
 
 .clabes-card {
     border: none;

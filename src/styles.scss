@@ -57,3 +57,23 @@ h6 {
 p {
     font-size: 17px;
 }
+
+.btn-primary,
+.btn-primary:active,
+.btn-primary:visited {
+    font-size: 22px;
+    background: $purple-dark !important;
+    border: none;
+    margin: 7px;
+    min-width: 150px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    i {
+        margin-right: 5px;
+    }
+}
+
+.btn-primary:hover {
+    background: $purple !important;
+}
