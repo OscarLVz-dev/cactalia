@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Clipboard } from '@angular/cdk/clipboard';
 
 @Component({
   selector: 'main-component',
@@ -7,11 +8,16 @@ import { Component } from '@angular/core';
 })
 export class MainComponent {
 
+  constructor(private clipboard: Clipboard) {}
+
   /**
    * Copy text to clipboard
    * @param text text to copy
    */
   copyText(text:string){
+    if(this.clipboard.copy(text)){
+
+    }
   }
 
 }
