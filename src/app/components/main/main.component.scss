@@ -99,6 +99,20 @@
                         color: $gray;
                     }
                 }
+
+                button:hover {
+                    border: 1px solid $pink-dark;
+        
+                    i {
+                        color: $pink-dark;
+                    }
+                }
+
+                button:active {
+                    i {
+                        color: $pink;
+                    }
+                }
             }
         }
     }
