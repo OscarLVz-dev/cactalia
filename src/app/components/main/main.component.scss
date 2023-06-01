@@ -166,3 +166,19 @@
         margin: 0px !important;
     }
 }
+
+@media only screen and (max-width: 500px) {
+    .main-card {
+        .actions {
+            margin-top: 130px;
+        }
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .main-card {
+        .actions {
+            margin-top: 115px;
+        }
+    }
+}
