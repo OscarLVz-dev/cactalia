@@ -32,6 +32,12 @@
     }
 
     .contact {
+        a:hover {
+            .text {
+                color: $green-dark;
+            }
+        }
+
         i {
             color: $green-dark;
             font-size: 22px;
