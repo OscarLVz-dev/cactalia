@@ -11,6 +11,21 @@
     transform: translateX(-50%);
     border: 1px solid $gray-light;
 
+    .download{
+        position: absolute;
+        bottom: 15px;
+        right: 25px;
+        i {
+            color: $gray;
+        }
+    }
+
+    .download:hover{
+        i {
+            color: $green-dark;
+        }
+    }
+
     .logo {
         width: 50%;
         margin: auto;
@@ -32,6 +47,7 @@
     }
 
     .contact {
+        text-align: center;
         a:hover {
             .text {
                 color: $green-dark;
@@ -41,7 +57,7 @@
         i {
             color: $green-dark;
             font-size: 22px;
-            display: flex;
+            display: inline-flex;
             justify-content: center;
 
             .text {
