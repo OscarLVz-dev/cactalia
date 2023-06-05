@@ -1,4 +1,5 @@
 @import "/src/assets/scss/colors.scss";
+@import "/src/assets/scss/fonts.scss";
 
 .cm-bg {
     background-color: $pink-light;
@@ -25,23 +26,32 @@
         h3 {
             text-align: center;
             font-size: 60px;
-            font-family: 'cactus-title' !important;
+            font-family: $font-title;
             color: $golden;
         }
         .text {
-            font-family: 'cactus', sans-serif !important;
+            font-family: $font-body;
             text-align: center;
             font-size: 30px;
             color: $gray;
+            margin-left: 5px;
         }
         a {
             margin-top: 20px;
             text-align: center;
             color: $gray;
-            font-family: 'cactus', sans-serif !important;
+            font-family:  $font-body;
             font-size: 25px;
             i {
                 color: $golden;
+            }
+        }
+
+        button{
+            font-size: 28px;
+            i {
+                margin-left: 7px;
+                font-size: 20px;
             }
         }
     }
@@ -58,7 +68,7 @@
     right: 0px;
     bottom: 0px;
     left: 0px;
-    opacity: 0.60;
+    opacity: 0;
 }
 
 @media (max-width: 460px) {
