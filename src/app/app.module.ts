@@ -9,6 +9,7 @@ import { FooterComponent } from './components/commons/footer/footer.component';
 import { NavbarComponent } from './components/commons/navbar/navbar.component';
 import { InstagramWidgetComponent } from './components/commons/widgets/instagram-widget/instagram-widget.component';
 import { SpotifyWidgetComponent } from './components/commons/widgets/spotify-widget/spotify-widget.component';
+import { CommingSoonComponent } from './components/commons/comming-soon/comming-soon.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { SpotifyWidgetComponent } from './components/commons/widgets/spotify-wid
     NavbarComponent,
     InstagramWidgetComponent,
     SpotifyWidgetComponent,
+    CommingSoonComponent,
   ],
   imports: [
     BrowserModule,
