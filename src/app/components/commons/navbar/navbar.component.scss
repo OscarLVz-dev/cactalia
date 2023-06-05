@@ -9,6 +9,10 @@
     max-width: 10%;
 }
 
+.logo:hover, .logo_name:hover{
+    cursor: pointer;
+}
+
 @media (max-width: 992px) {
     .logo {
         margin-left: 10px;
