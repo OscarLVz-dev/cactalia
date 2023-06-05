@@ -1,0 +1,90 @@
+@import "/src/assets/scss/colors.scss";
+
+.cm-bg {
+    background-color: $pink-light;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    height: 100%;
+    .brand {
+        text-align: center;
+        .logo {
+            width: 20%;
+            margin-bottom: 15px;
+        }
+        .logo_name {
+            margin-left: 10px;
+            width: 35%;
+            margin-bottom: 15px;
+        }
+    }
+    .form {
+        h3 {
+            text-align: center;
+            font-size: 60px;
+            font-family: 'cactus-title' !important;
+            color: $golden;
+        }
+        .text {
+            font-family: 'cactus', sans-serif !important;
+            text-align: center;
+            font-size: 30px;
+            color: $gray;
+        }
+        a {
+            margin-top: 20px;
+            text-align: center;
+            color: $gray;
+            font-family: 'cactus', sans-serif !important;
+            font-size: 25px;
+            i {
+                color: $golden;
+            }
+        }
+    }
+}
+
+.container::before {
+    content: "";
+    background-color: $pink-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    background-attachment: fixed;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.60;
+}
+
+@media (max-width: 460px) {
+    .container {
+        .row {
+            height: 100%;
+            align-items: center;
+        }
+        .form {
+            h3 {
+                font-size: 45px;
+            }
+        }
+    }
+}
+
+@media (max-width: 370px) {
+    .container {
+        .row {
+            height: 100%;
+            align-items: center;
+        }
+        .form {
+            h3 {
+                font-size: 38px;
+            }
+        }
+    }
+}
