@@ -10,6 +10,7 @@ import { NavbarComponent } from './components/commons/navbar/navbar.component';
 import { InstagramWidgetComponent } from './components/commons/widgets/instagram-widget/instagram-widget.component';
 import { SpotifyWidgetComponent } from './components/commons/widgets/spotify-widget/spotify-widget.component';
 import { CommingSoonComponent } from './components/commons/comming-soon/comming-soon.component';
+import { CatalogPinesComponent } from './components/pages/catalog-pines/catalog-pines.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { CommingSoonComponent } from './components/commons/comming-soon/comming-
     InstagramWidgetComponent,
     SpotifyWidgetComponent,
     CommingSoonComponent,
+    CatalogPinesComponent,
   ],
   imports: [
     BrowserModule,
