@@ -19,8 +19,18 @@
         border-bottom: 5px solid $yellow;
     }
 
-    .categories {
+    .title{
+        color: $green-dark;
         text-align: center;
+        font-size: 64px;
+        margin: 0;
+    }
+
+    .description{
+        color: $gray;
+        text-align: center;
+        font-size: 23px;
+        margin: 0;
     }
 }
 
