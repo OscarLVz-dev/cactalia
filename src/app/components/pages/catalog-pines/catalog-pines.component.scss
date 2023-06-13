@@ -39,6 +39,36 @@
     border-radius: 15px;
 }
 
+.list {
+    h1 {
+        color: $green-dark;
+        font-size: 40px;
+    }
+}
+
+.categories{
+    h2 {
+        margin-top: 5px;
+        color: $green-dark;
+        font-size: 35px;
+    }
+
+    button{
+        width: 100%;
+        margin: 0;
+        border: 1px solid $gray-light;
+        background: white;
+        color: $gray;
+        font-size: 22px;
+    }
+
+    button:hover {
+        border: 1px solid $purple-dark;
+        background: $purple-dark;
+        color: $white;
+    }
+}
+
 @media only screen and (max-width: 576px) {
     section {
         margin: 12px !important;
