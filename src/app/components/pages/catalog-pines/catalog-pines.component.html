@@ -8,20 +8,20 @@
 </section>
 <div class="container mb-3">
     <div class="row">
-        <div class="col-12 col-md-4 mb-3">
+        <div class="col-12 col-md-3 mb-3">
             <div class="column-card categories p-4 shadow">
                 <h2>Categorias</h2>
                 <div class="row">
-                    <div class="col-6 col-md-12">
+                    <div class="col-6 col-md-12" *ngFor="let folder of folders">
                         <button type="button" class="btn btn-outline-light">
-                            Catálogos
+                            {{folder.name}}
                         </button>
                     </div>
 
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-8">
+        <div class="col-12 col-md-9">
             <div class="column-card list p-4 shadow">
                 <h1>Pines</h1>
             </div>

@@ -11,6 +11,7 @@ import { InstagramWidgetComponent } from './components/commons/widgets/instagram
 import { SpotifyWidgetComponent } from './components/commons/widgets/spotify-widget/spotify-widget.component';
 import { CommingSoonComponent } from './components/commons/comming-soon/comming-soon.component';
 import { CatalogPinesComponent } from './components/pages/catalog-pines/catalog-pines.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { CatalogPinesComponent } from './components/pages/catalog-pines/catalog-
     BrowserModule,
     ClipboardModule,
     AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
