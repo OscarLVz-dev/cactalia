@@ -38,7 +38,7 @@ export class GoogleDriveServiceService {
     let params = new HttpParams();
     params = params.append('orderBy', "name");
     params = params.append('q', "'" + folderId + "' in parents");
-    params = params.append('fields', "nextPageToken,files(name,webViewLink,description,id)");
+    params = params.append('fields', "nextPageToken,files(id,name,description,webContentLink)");
 
     const headers = new HttpHeaders({
       'Content-Type': 'application/json',
