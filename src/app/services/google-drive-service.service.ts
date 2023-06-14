@@ -10,11 +10,11 @@ export class GoogleDriveServiceService {
 
   constructor(
     private http: HttpClient,
-    ) { }
+  ) { }
 
   /**
    * Get folders in foler by folder id
-   * @returns 
+   * @returns folders
    */
   getFoldersInFolder(bearerToken: string) {
     let params = new HttpParams();
@@ -26,8 +26,26 @@ export class GoogleDriveServiceService {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${bearerToken}`
     })
-    
-    return this.http.get<any>(this.BASE_URL, { params: params, headers:headers });
+
+    return this.http.get<any>(this.BASE_URL, { params: params, headers: headers });
+  }
+
+  /**
+   * Get files in foler by folder id
+   * @returns files
+   */
+  getFilesInFolder(folderId: string, bearerToken: string) {
+    let params = new HttpParams();
+    params = params.append('orderBy', "name");
+    params = params.append('q', "'" + folderId + "' in parents");
+    params = params.append('fields', "nextPageToken,files(name,webViewLink,description,id)");
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${bearerToken}`
+    })
+
+    return this.http.get<any>(this.BASE_URL, { params: params, headers: headers });
   }
 
 }

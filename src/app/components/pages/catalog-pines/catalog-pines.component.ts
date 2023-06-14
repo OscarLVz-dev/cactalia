@@ -9,16 +9,18 @@ import { GoogleDriveServiceService } from 'src/app/services/google-drive-service
 })
 export class CatalogPinesComponent {
 
+  public token;
   public folders;
   public folderSelected;
+  public folderSelectedPines;
 
   constructor(
     private googleDriveService: GoogleDriveServiceService,
     private googleAuthService: GoogleAuthServiceService
   ) {
     this.googleAuthService.getBearerToken().subscribe(response => {
-      let token = response.access_token;
-      this.googleDriveService.getFoldersInFolder(token).subscribe(response => {
+      this.token = response.access_token;
+      this.googleDriveService.getFoldersInFolder(this.token).subscribe(response => {
         this.folders = response.files;
       });
     });
@@ -30,6 +32,9 @@ export class CatalogPinesComponent {
    */
   selectFolder(folder:any){
     this.folderSelected = folder;
+    this.googleDriveService.getFilesInFolder(folder.id, this.token).subscribe(response => {
+      this.folderSelectedPines = response.files;
+    });
   }
 
 }
