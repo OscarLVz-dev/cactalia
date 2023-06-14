@@ -24,8 +24,10 @@
             <div *ngIf="folderSelected" class="column-card list pt-2 p-4 shadow">
                 <h1 class="mb-4">Pins - {{folderSelected.name}}</h1>
                 <div class="row">
-                    <div class="col-6 col-md-4" *ngFor="let pin of folderSelectedPines">
-                        <img src="{{pin.webContentLink}}" class="shadow mb-4">
+                    <div class="col-6 col-md-4 mb-3" *ngFor="let pin of folderSelectedPines">
+                        <img src="{{pin.webContentLink}} {{pin.fullFileExtension}}">
+                        <p class="name">{{pin.name}}</p>
+                        <p class="description">{{pin.description}}</p>
                     </div>
                 </div>
             </div>

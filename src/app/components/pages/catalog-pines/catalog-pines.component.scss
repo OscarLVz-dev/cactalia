@@ -18,14 +18,14 @@
         background-position: top;
     }
 
-    .title{
+    .title {
         color: $green-dark;
         text-align: center;
         font-size: 64px;
         margin: 0;
     }
 
-    .description{
+    .description {
         color: $gray;
         text-align: center;
         font-size: 23px;
@@ -34,7 +34,7 @@
     }
 }
 
-.column-card{
+.column-card {
     background: white;
     border-radius: 15px;
 }
@@ -45,14 +45,26 @@
         font-size: 40px;
     }
 
-    img{
+    img {
         width: 100%;
         border-radius: 15px;
         border: 2px solid $gray-light;
     }
+
+    .name {
+        font-weight: bold;
+        font-size: 22px;
+        margin: 0;
+        margin-left: 10px !important;
+    }
+
+    .description {
+        font-size: 19px;
+        margin-left: 10px !important;
+    }
 }
 
-.categories{
+.categories {
     h2 {
         text-align: center;
         margin-top: 5px;
@@ -60,7 +72,7 @@
         font-size: 35px;
     }
 
-    button{
+    button {
         width: 100%;
         margin: 0;
         border: 1px solid $gray-light;
