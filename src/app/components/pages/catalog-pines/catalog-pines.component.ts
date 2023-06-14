@@ -10,6 +10,7 @@ import { GoogleDriveServiceService } from 'src/app/services/google-drive-service
 export class CatalogPinesComponent {
 
   public folders;
+  public folderSelected;
 
   constructor(
     private googleDriveService: GoogleDriveServiceService,
@@ -21,6 +22,14 @@ export class CatalogPinesComponent {
         this.folders = response.files;
       });
     });
+  }
+
+  /**
+   * Set folder selected
+   * @param folder 
+   */
+  selectFolder(folder:any){
+    this.folderSelected = folder;
   }
 
 }
