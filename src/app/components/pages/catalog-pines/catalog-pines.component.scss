@@ -45,22 +45,32 @@
         font-size: 40px;
     }
 
-    img {
-        width: 100%;
-        border-radius: 15px;
-        border: 2px solid $gray-light;
-    }
-
-    .name {
-        font-weight: bold;
-        font-size: 22px;
-        margin: 0;
-        margin-left: 10px !important;
-    }
-
-    .description {
-        font-size: 19px;
-        margin-left: 10px !important;
+    .pin-card {
+        border: 1px solid $gray-light;
+        img {
+            border: 1px solid $gray-light;
+            width: 85%;
+            display: flex;
+            margin: auto;
+        }
+    
+        .name {
+            font-weight: bold;
+            font-size: 25px;
+            width: 85%;
+            display: flex;
+            margin: auto;
+            color: $gray;
+            line-height: 19px;
+        }
+    
+        .description {
+            font-size: 19px;
+            width: 85%;
+            display: flex;
+            margin: auto;
+            color: $gray;
+        }
     }
 }
 
