@@ -47,13 +47,14 @@
 
     .pin-card {
         border: 1px solid $gray-light;
+
         img {
             border: 1px solid $gray-light;
             width: 85%;
             display: flex;
             margin: auto;
         }
-    
+
         .name {
             font-weight: bold;
             font-size: 25px;
@@ -63,13 +64,43 @@
             color: $gray;
             line-height: 19px;
         }
-    
+
         .description {
             font-size: 19px;
             width: 85%;
             display: flex;
             margin: auto;
             color: $gray;
+        }
+
+        .add-button {
+            width: 85%;
+            display: flex;
+            margin: auto;
+            border: 1px solid $gray-light;
+            background: white;
+            color: $gray;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i{
+                color: $green-dark;
+                margin-left: 5px;
+                font-size: 19px;
+            }
+
+        }
+
+        .add-button:hover{
+            background: $green-dark;
+            border: 1px solid $green-dark;
+            color: white;  
+            
+            i{
+                color: $white;
+            }
         }
     }
 }
