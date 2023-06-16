@@ -44,6 +44,12 @@
         color: $white;
     }
 
+    .categoryActive{
+        border: 1px solid $purple-dark;
+        background: $purple-dark;
+        color: $white;
+    }
+
     .pin-card {
         border: 1px solid $gray-light;
 
