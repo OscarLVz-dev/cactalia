@@ -6,37 +6,34 @@
         </div>
     </div>
 </section>
-<div class="container mb-3">
-    <div class="row">
-        <div class="col-12 col-md-3 mb-3">
-            <div class="column-card categories pt-2 p-4 shadow">
-                <h2>Categorias</h2>
-                <div class="row">
-                    <div class="col-6 col-md-12" *ngFor="let folder of folders">
-                        <button type="button" class="btn btn-outline-light mt-2" (click)="selectFolder(folder)">
-                            {{folder.name}}
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-9">
-            <div *ngIf="folderSelected" class="column-card list pt-2 p-4 shadow">
-                <h1 class="mb-4">Pins - {{folderSelected.name}}</h1>
-                <div class="row">
-                    <div class="col-12 col-md-4 mb-3" *ngFor="let pin of folderSelectedPines">
-                        <div class="pin-card shadow pb-3">
-                            <img class="mt-4 mb-1" src="{{pin.webContentLink}} {{pin.fullFileExtension}}">
-                            <p class="name mt-3">{{pin.name}}</p>
-                            <p class="description">{{pin.description}}</p>
-                            <button type="button" class="add-button btn btn-outline-light mt-2">
-                                Añadir al carrito
-                                <i class="fa-solid fa-cart-plus"></i>
+<section>
+    <div class="container mb-3">
+        <div class="row">
+            <div class="col-12 p-0">
+                <div class="column-card list py-4 px-4 px-md-5 shadow">
+                    <h1>Catalogo de pines</h1>
+                    <div class="row">
+                        <div class="col-12 categories-list">
+                            <button *ngFor="let folder of folders" type="button" class="btn btn-outline-light py-0 mt-3" (click)="selectFolder(folder)">
+                                {{folder.name}}
                             </button>
                         </div>
                     </div>
+                    <div class="row mt-4">
+                        <div class="col-12 col-md-3 mb-3" *ngFor="let pin of folderSelectedPines">
+                            <div class="pin-card shadow pb-3">
+                                <img class="mt-4 mb-1" src="{{pin.webContentLink}} {{pin.fullFileExtension}}">
+                                <p class="name mt-3">{{pin.name}}</p>
+                                <p class="description">{{pin.description}}</p>
+                                <button type="button" class="add-button btn btn-outline-light mt-2">
+                                    Añadir al carrito
+                                    <i class="fa-solid fa-cart-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+            </div>
                 </div>
             </div>
-        </div>
     </div>
-</div>
+</section>
