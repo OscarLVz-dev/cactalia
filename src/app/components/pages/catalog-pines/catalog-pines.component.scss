@@ -17,53 +17,20 @@
         background-repeat: no-repeat;
         background-position: top;
     }
-
-    .title {
-        color: $green-dark;
-        text-align: center;
-        font-size: 64px;
-        margin: 0;
-    }
-
-    .description {
-        color: $gray;
-        text-align: center;
-        font-size: 23px;
-        margin: 0;
-        line-height: 20px;
-    }
 }
 
-.column-card {
+.catalog {
     background: white;
     border-radius: 15px;
-}
 
-.list {
     h1 {
         color: $green-dark;
         font-size: 40px;
         margin: 0;
     }
 
-    .description{
-        font-size: 21px;
-        margin: 0;
-    }
-
-    .categories{
-        color: $gray;
-        font-weight: 800;
-        font-size: 21px;
-        line-height: 33px;
-    }
-
-    hr{
-        margin-top: 0;
-    }
-
     button {
-        border: none;
+        border: 1px solid $gray-light;
         background: none;
         color: $gray;
         font-size: 22px;
@@ -72,6 +39,7 @@
     }
 
     button:hover {
+        border: 1px solid $purple-dark;
         background: $purple-dark;
         color: $white;
     }
@@ -133,30 +101,6 @@
                 color: $white;
             }
         }
-    }
-}
-
-.categories {
-    h2 {
-        text-align: center;
-        margin-top: 5px;
-        color: $green-dark;
-        font-size: 35px;
-    }
-
-    button {
-        width: 100%;
-        margin: 0;
-        border: 1px solid $gray-light;
-        background: white;
-        color: $gray;
-        font-size: 22px;
-    }
-
-    button:hover {
-        border: 1px solid $purple-dark;
-        background: $purple-dark;
-        color: $white;
     }
 }
 
