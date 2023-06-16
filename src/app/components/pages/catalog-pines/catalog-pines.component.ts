@@ -33,6 +33,17 @@ export class CatalogPinesComponent {
   selectFolder(folder:any){
     this.folderSelected = folder;
     this.googleDriveService.getFilesInFolder(folder.id, this.token).subscribe(response => {
+      if(response.files){
+        response.files.forEach(file => {
+          if(file.description){
+            let jsonData = JSON.parse(file.description);
+            file.name = jsonData.name;
+            file.desc = jsonData.desc;
+            file.price = jsonData.price;
+            file.quantity = jsonData.price;
+          }
+        });
+      }
       this.folderSelectedPines = response.files;
     });
   }

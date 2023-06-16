@@ -25,7 +25,7 @@
                             <div class="pin-card shadow pb-3">
                                 <img class="mt-4 mb-1" src="{{pin.webContentLink}} {{pin.fullFileExtension}}">
                                 <p class="name mt-3">{{pin.name}}</p>
-                                <p class="description">{{pin.description}}</p>
+                                <p class="description" *ngIf="pin.desc">{{pin.desc}}</p>
                                 <button type="button" class="add-button btn btn-outline-light mt-2">
                                     Añadir al carrito
                                     <i class="fa-solid fa-cart-plus"></i>
