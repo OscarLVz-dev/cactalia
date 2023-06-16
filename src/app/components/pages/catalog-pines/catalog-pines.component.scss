@@ -78,6 +78,14 @@
             color: $gray;
         }
 
+        .price {
+            font-size: 19px;
+            width: 85%;
+            display: flex;
+            margin: auto;
+            color: $gray;            
+        }
+
         .add-button {
             width: 85%;
             display: flex;
