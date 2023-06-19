@@ -12,6 +12,7 @@ import { SpotifyWidgetComponent } from './components/commons/widgets/spotify-wid
 import { CommingSoonComponent } from './components/commons/comming-soon/comming-soon.component';
 import { CatalogPinesComponent } from './components/pages/catalog-pines/catalog-pines.component';
 import { HttpClientModule } from '@angular/common/http';
+import { LoadingSpinnerComponent } from './components/commons/loading-spinner/loading-spinner.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
     SpotifyWidgetComponent,
     CommingSoonComponent,
     CatalogPinesComponent,
+    LoadingSpinnerComponent,
   ],
   imports: [
     BrowserModule,
