@@ -38,6 +38,7 @@ export class CatalogPinesComponent {
    * @param folder 
    */
   selectFolder(folder: any) {
+    this.loading = true;
     this.folderSelected = folder;
     this.googleDriveService.getFilesInFolder(folder.id, this.token).subscribe(response => {
       if (response.files) {
@@ -52,6 +53,9 @@ export class CatalogPinesComponent {
         });
       }
       this.folderSelectedPines = response.files;
+      this.loading = false;
+    }, error => {
+      this.loading = false;
     });
   }
 

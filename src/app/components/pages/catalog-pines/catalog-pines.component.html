@@ -21,7 +21,7 @@
                         </div>
                     </div>
                     <loading-spinner *ngIf="loading"/>
-                    <div class="row mt-4">
+                    <div class="row mt-4" *ngIf="!loading">
                         <div class="col-12 col-md-3 mb-3" *ngFor="let pin of folderSelectedPines">
                             <div class="pin-card shadow pb-3">
                                 <img class="mt-4 mb-1" src="{{pin.webContentLink}} {{pin.fullFileExtension}}">
