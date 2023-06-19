@@ -13,16 +13,23 @@ export class CatalogPinesComponent {
   public folders;
   public folderSelected;
   public folderSelectedPines;
+  public loading:boolean = false;
 
   constructor(
     private googleDriveService: GoogleDriveServiceService,
     private googleAuthService: GoogleAuthServiceService
   ) {
+    this.loading = true;
     this.googleAuthService.getBearerToken().subscribe(response => {
       this.token = response.access_token;
       this.googleDriveService.getFoldersInFolder(this.token).subscribe(response => {
         this.folders = response.files;
+        this.loading = false;
+      }, error => {
+        this.loading = false;
       });
+    }, error =>{
+      this.loading = false;
     });
   }
 
@@ -30,12 +37,12 @@ export class CatalogPinesComponent {
    * Set folder selected
    * @param folder 
    */
-  selectFolder(folder:any){
+  selectFolder(folder: any) {
     this.folderSelected = folder;
     this.googleDriveService.getFilesInFolder(folder.id, this.token).subscribe(response => {
-      if(response.files){
+      if (response.files) {
         response.files.forEach(file => {
-          if(file.description){
+          if (file.description) {
             let jsonData = JSON.parse(file.description);
             file.name = jsonData.name;
             file.desc = jsonData.desc;
