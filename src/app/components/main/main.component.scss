@@ -112,8 +112,13 @@
         z-index: 1;
         font-family: $font-body;
         font-size: 25px;
-        color: $purple;
+        color: $purple-dark;
         margin: 0;
+
+        .detail {
+            font-size: 18px;
+            color: $gray;
+        }
     }
 
     ul {
