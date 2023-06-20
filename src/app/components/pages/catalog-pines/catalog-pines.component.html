@@ -20,7 +20,7 @@
                         </button>
                     </div>
                 </div>
-                <loading-spinner *ngIf="loading"/>
+                <loading-spinner [loading]="loading"/>
                 <div class="row mt-4">
                         <div class="col-12 col-md-3 mb-3" *ngFor="let pin of folderSelectedPines">
                             <div class="pin-card shadow pb-3">
