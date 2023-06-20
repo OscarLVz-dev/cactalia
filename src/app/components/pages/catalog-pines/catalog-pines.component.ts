@@ -13,7 +13,7 @@ export class CatalogPinesComponent {
   public folders;
   public folderSelected;
   public folderSelectedQuantity:number=0;
-  public folderSelectedPines;
+  public folderSelectedPines = null;
   public loading:boolean = false;
 
   constructor(

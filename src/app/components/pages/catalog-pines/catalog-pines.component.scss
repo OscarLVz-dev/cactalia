@@ -118,6 +118,18 @@
     }
 }
 
+.empty-box{
+    text-align: center;
+    i {
+        color: $gray;
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}
+
 @media only screen and (max-width: 576px) {
     section {
         margin: 12px !important;
