@@ -22,19 +22,24 @@
                 </div>
                 <loading-spinner [loading]="loading"/>
                 <div class="row mt-4">
+                    <div *ngIf="folderSelectedQuantity > 0; else emptyPines">
                         <div class="col-12 col-md-3 mb-3" *ngFor="let pin of folderSelectedPines">
-                            <div class="pin-card shadow pb-3">
-                                <img class="mt-4 mb-1" src="{{pin.webContentLink}} {{pin.fullFileExtension}}">
-                                <p class="name mt-3">{{pin.name}}</p>
-                                <p class="description" *ngIf="pin.desc">{{pin.desc}}</p>
-                                <span class="price" *ngIf="pin.price">{{pin.price | currency:"$"}}</span>
-                                <button type="button" class="add-button btn btn-outline-light mt-2 py-0">
-                                    Añadir al carrito
-                                    <i class="fa-solid fa-cart-plus"></i>
-                                </button>
+                                <div class="pin-card shadow pb-3" *ngIf="pin.quantity>0">
+                                    <img class="mt-4 mb-1" src="{{pin.webContentLink}}">
+                                    <p class="name mt-3">{{pin.name}}</p>
+                                    <p class="description" *ngIf="pin.desc">{{pin.desc}}</p>
+                                    <span class="price" *ngIf="pin.price">{{pin.price | currency:"$"}}</span>
+                                    <button type="button" class="add-button btn btn-outline-light mt-2 py-0">
+                                        Añadir al carrito
+                                        <i class="fa-solid fa-cart-plus"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
+                    <ng-template #emptyPines>
+                        Content to render when condition is false.
+                    </ng-template>
                 </div>
             </div>
         </div>

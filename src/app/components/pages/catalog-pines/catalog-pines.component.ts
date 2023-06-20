@@ -12,6 +12,7 @@ export class CatalogPinesComponent {
   public token;
   public folders;
   public folderSelected;
+  public folderSelectedQuantity:number=0;
   public folderSelectedPines;
   public loading:boolean = false;
 
@@ -40,6 +41,7 @@ export class CatalogPinesComponent {
   selectFolder(folder: any) {
     this.loading = true;
     this.folderSelected = folder;
+    this.folderSelectedQuantity=0;
     this.googleDriveService.getFilesInFolder(folder.id, this.token).subscribe(response => {
       if (response.files) {
         response.files.forEach(file => {
@@ -49,6 +51,9 @@ export class CatalogPinesComponent {
             file.desc = jsonData.desc;
             file.price = jsonData.price;
             file.quantity = jsonData.price;
+            if(file.quantity > 1){
+              this.folderSelectedQuantity++;
+            }
           }
         });
       }
