@@ -1,0 +1,16 @@
+@import "/src/assets/scss/colors.scss";
+
+#my_cart {
+    display: block;
+    position: fixed;
+    bottom: 120px;
+    right: 37px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: $purple-dark;
+    cursor: pointer;
+    padding: 12px 15px 12px 15px;
+    border-radius: 100%;
+    border: 2px solid $purple-light;
+}
