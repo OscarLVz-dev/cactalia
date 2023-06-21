@@ -3,14 +3,18 @@
 #my_cart {
     display: block;
     position: fixed;
-    bottom: 120px;
-    right: 37px;
+    bottom: 20px;
+    right: 30px;
     z-index: 99;
     border: none;
     outline: none;
     background-color: $purple-dark;
     cursor: pointer;
-    padding: 12px 15px 12px 15px;
+    padding: 15px 15px 12px 15px;
     border-radius: 100%;
     border: 2px solid $purple-light;
+
+    i{
+        font-size: 25px;
+    }
 }
