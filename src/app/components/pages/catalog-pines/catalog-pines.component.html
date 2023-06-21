@@ -13,7 +13,7 @@
                 <div class="catalog py-4 px-4 px-md-5 shadow">
                     <h1>Catalogo de pines</h1>
                     <div class="row">
-                        <div class="col-12 categories-list">
+                        <div class="col-12">
                             <button *ngFor="let folder of folders" [class.categoryActive]="folder == folderSelected"
                                 type="button" class="category btn btn-outline-light py-0 mt-3"
                                 (click)="selectFolder(folder)">
@@ -36,11 +36,11 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div *ngIf="!loading && folderSelectedPines && folderSelectedQuantity <= 0">
-                    <div class="empty-box col-12 mb-3">
-                        <i class="fa-solid fa-parachute-box"></i>
-                        <p class="mt-2">Sin productos. Inventario en camino.</p>
+                    <div *ngIf="!loading && folderSelectedPines && folderSelectedQuantity <= 0">
+                        <div class="empty-box col-12 mb-3 mt-4">
+                            <i class="fa-solid fa-parachute-box"></i>
+                            <p class="mt-2">Sin productos. Inventario en camino.</p>
+                        </div>
                     </div>
                 </div>
             </div>
