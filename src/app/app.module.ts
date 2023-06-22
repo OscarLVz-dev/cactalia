@@ -13,6 +13,7 @@ import { CommingSoonComponent } from './components/commons/comming-soon/comming-
 import { CatalogPinesComponent } from './components/pages/catalog-pines/catalog-pines.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './components/commons/loading-spinner/loading-spinner.component';
+import { HoverClassDirective } from './directives/hover-class.directive';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { LoadingSpinnerComponent } from './components/commons/loading-spinner/lo
     CommingSoonComponent,
     CatalogPinesComponent,
     LoadingSpinnerComponent,
+    HoverClassDirective,
   ],
   imports: [
     BrowserModule,
