@@ -14,6 +14,7 @@ import { CatalogPinesComponent } from './components/pages/catalog-pines/catalog-
 import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './components/commons/loading-spinner/loading-spinner.component';
 import { HoverClassDirective } from './directives/hover-class.directive';
+import { TicketCartComponent } from './components/commons/ticket-cart/ticket-cart.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { HoverClassDirective } from './directives/hover-class.directive';
     CatalogPinesComponent,
     LoadingSpinnerComponent,
     HoverClassDirective,
+    TicketCartComponent,
   ],
   imports: [
     BrowserModule,
