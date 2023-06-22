@@ -16,6 +16,7 @@ import { LoadingSpinnerComponent } from './components/commons/loading-spinner/lo
 import { HoverClassDirective } from './directives/hover-class.directive';
 import { TicketCartComponent } from './components/commons/ticket-cart/ticket-cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatDialogModule} from '@angular/material/dialog'; 
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
