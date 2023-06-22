@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoadingSpinnerComponent } from './components/commons/loading-spinner/loading-spinner.component';
 import { HoverClassDirective } from './directives/hover-class.directive';
 import { TicketCartComponent } from './components/commons/ticket-cart/ticket-cart.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { TicketCartComponent } from './components/commons/ticket-cart/ticket-car
     ClipboardModule,
     AppRoutingModule,
     HttpClientModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
