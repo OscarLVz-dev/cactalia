@@ -4,10 +4,10 @@
     background: white;
     position: relative;
     box-sizing: border-box;
-    width: 90%;
+    width: 98%;
+    height: 90%;
     margin: 20px 0 20px 0;
     padding: 20px;
-    box-shadow: 2px 2px 15px 0px $gray;
 
     &:before,
     &:after {
@@ -15,7 +15,7 @@
         position: absolute;
         left: 5px;
         height: 6px;
-        width: 100%;
+        width: 98%;
     }
 
     &:before {
@@ -29,19 +29,8 @@
     }
 }
 
-.ticket__content {
+.ticket_content {
     box-sizing: border-box;
     height: 100%;
     width: 100%;
-    border: 6px solid #D8D8D8;
-}
-
-.ticket__text {
-    width: 100%;
-    font-family: 'Helvetica', 'Arial', sans-serif;
-    font-size: 3rem;
-    font-weight: 900;
-    text-transform: uppercase;
-    color: #C6DEDE;
-    transform: translate(-25px, 25px) rotate(-55deg);
 }

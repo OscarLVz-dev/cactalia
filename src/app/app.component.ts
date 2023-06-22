@@ -16,6 +16,7 @@ export class AppComponent {
     const dialogRef = this.dialog.open(TicketCartComponent, {
       width: '90vw',
       maxWidth: '400px',
+      height: '90vh',
       maxHeight: '90vh',
       panelClass: 'ticket-container'
     });
