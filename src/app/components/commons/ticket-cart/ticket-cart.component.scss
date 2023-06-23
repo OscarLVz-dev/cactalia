@@ -5,7 +5,7 @@
     position: relative;
     box-sizing: border-box;
     width: 98%;
-    height: 90%;
+    height: 100%;
     margin: 20px 0 20px 0;
     padding: 20px;
 
@@ -38,20 +38,46 @@
         .logo {
             width: 100%;
         }
-    
+
         .logo_name {
             width: 40%;
         }
-    
+
         .title {
             color: $green-dark;
         }
     }
 
-    .product{
-        img{
-            width: 100%;
+    .products {
+        .product {
+            img {
+                width: 100%;
+                border-radius: 5px;
+            }
+
+            .product_info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                .product_name {
+                    color: $gray;
+                    font-size: 20px;
+                    font-weight: 800;
+                }
+
+            }
+
+            .product_price {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            span {
+                color: $gray;
+                font-size: 17px;
+            }
         }
     }
-
 }
