@@ -34,6 +34,17 @@
     height: 100%;
     width: 100%;
 
+    span {
+        color: $gray;
+        font-size: 17px;
+    }
+
+    hr{
+        border-top: 2px dashed $gray;
+        margin: auto;
+        width: 93%;
+    }
+
     .header {
         .logo {
             width: 100%;
@@ -49,6 +60,13 @@
     }
 
     .products {
+        .columnTitle {
+            display: block;
+            font-weight: 800;
+            text-align: center;
+            font-size: 21px;
+        }
+
         .product {
             img {
                 width: 100%;
@@ -72,11 +90,10 @@
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
-            }
 
-            span {
-                color: $gray;
-                font-size: 17px;
+                span {
+                    text-align: center;
+                }
             }
         }
     }

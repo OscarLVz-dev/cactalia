@@ -10,6 +10,16 @@
             </div>
         </div>
         <div class="products mt-3">
+            <div class="row mb-2">
+                <hr class="mt-2">
+                <div class="col-9">
+                    <span class="columnTitle">Producto</span>
+                </div>
+                <div class="col-3 product_price">
+                    <span class="columnTitle">Total</span>
+                </div>
+                <hr class="mb-3">
+            </div>
             <div class="row product mb-4" *ngFor="let product of products">
                 <div class="col-3">
                     <img class="shadow" src="{{product.photo}}">
