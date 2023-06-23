@@ -82,6 +82,7 @@ p {
 }
 
 .ticket-container {
+    overflow: scroll;
     mat-dialog-container {
         .mdc-dialog__container {
             .mat-mdc-dialog-surface {
