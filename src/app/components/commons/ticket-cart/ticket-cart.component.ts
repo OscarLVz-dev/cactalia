@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 
 @Component({
@@ -6,7 +6,11 @@ import { Product } from 'src/app/models/product';
   templateUrl: './ticket-cart.component.html',
   styleUrls: ['./ticket-cart.component.scss']
 })
-export class TicketCartComponent {
+export class TicketCartComponent implements OnInit {
+
+  ngOnInit(): void {
+    //Cargar productos de storage  
+  }
 
   product: Product = {
     name: "Pin de ranita",
