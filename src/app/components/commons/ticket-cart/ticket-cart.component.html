@@ -26,10 +26,10 @@
                 </div>
                 <div class="col-6 product_info">
                     <span class="product_name">{{product.name}}</span>
-                    <span>1 x {{product.price}}</span>
+                    <span>1 x {{product.price | currency:"$"}}</span>
                 </div>
                 <div class="col-3 product_price">
-                    <span>{{product.price}}</span>
+                    <span>{{product.price | currency:"$"}}</span>
                 </div>
             </div>
             <hr>

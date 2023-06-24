@@ -1,6 +1,7 @@
 export class Product {
-    public photo;
-    public name;
-    public description;
-    public price;
+    public photo:string;
+    public name:string;
+    public description:string;
+    public price:number;
+    public quantity:number;
 }
