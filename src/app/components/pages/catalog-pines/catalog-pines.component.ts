@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { GoogleAuthServiceService } from 'src/app/services/google-auth-service.service';
 import { GoogleDriveServiceService } from 'src/app/services/google-drive-service.service';
+import { TicketCartService } from 'src/app/services/ticket-cart.service';
 
 @Component({
   selector: 'catalog-pines-component',
@@ -17,6 +18,7 @@ export class CatalogPinesComponent {
   public loading:boolean = false;
 
   constructor(
+    private ticketService: TicketCartService,
     private googleDriveService: GoogleDriveServiceService,
     private googleAuthService: GoogleAuthServiceService
   ) {
@@ -62,6 +64,13 @@ export class CatalogPinesComponent {
     }, error => {
       this.loading = false;
     });
+  }
+
+  /**
+   * Add item to cart
+   */
+  addItem(){
+    this.ticketService.addItem();
   }
 
 }
