@@ -7,16 +7,37 @@ import iziToast from 'izitoast';
 })
 export class TicketCartService {
 
-  public static cartStorageName:string ="cctla_crt";
+  public static cartStorageName: string = "cctla_crt";
+
+
+  /**
+   * Get cart items
+   */
+  getItems():Product[] {
+    if (typeof (Storage) !== 'undefined') {
+      let cart: Product[] = JSON.parse(localStorage.getItem(TicketCartService.cartStorageName));
+      if (!cart) {
+        return [];
+      } else {
+        return cart;
+      }
+    } else {
+      iziToast.error({
+        title: 'Error',
+        message: 'Navegador no compatible.',
+      });
+      return [];
+    }
+  }
 
   /**
    * Add item to cart
    */
-  addItem(item:Product) {
+  addItem(item: Product) {
     if (typeof (Storage) !== 'undefined') {
-      let cart:Product[] = JSON.parse(localStorage.getItem(TicketCartService.cartStorageName));
+      let cart: Product[] = JSON.parse(localStorage.getItem(TicketCartService.cartStorageName));
       if (!cart) {
-        let newCart:Product[] = [item];
+        let newCart: Product[] = [item];
         localStorage.setItem(TicketCartService.cartStorageName, JSON.stringify(newCart));
       } else {
         cart.push(item);

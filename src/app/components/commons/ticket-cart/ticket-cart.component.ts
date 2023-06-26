@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
+import { TicketCartService } from 'src/app/services/ticket-cart.service';
 
 @Component({
   selector: 'ticket-cart',
@@ -11,17 +12,12 @@ export class TicketCartComponent implements OnInit {
   products: Product[] = [];
   total: number = 0;
 
-  product: Product = {
-    name: "Pin de ranita",
-    description: "Hermoso pin de ranita bebe. 20x10 cm.",
-    price: 40.00,
-    photo: "assets/img/product.jpg",
-    quantity: 1,
-  };
-
+  constructor(
+    private ticketService: TicketCartService,
+  ){}
+  
   ngOnInit(): void {
-    //this.products = [this.product, this.product, this.product, this.product, this.product, this.product];
-    //Cargar productos de storage  
+    this.products=this.ticketService.getItems();
   }
 
 }
