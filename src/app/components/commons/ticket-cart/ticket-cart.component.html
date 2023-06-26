@@ -27,7 +27,7 @@
                 </div>
                 <hr class="mb-3">
             </div>
-            <div class="row product mb-4" *ngFor="let product of products">
+            <div class="row product mb-4" *ngFor="let product of products; let i = index">
                 <div class="col-3">
                     <img class="shadow" src="{{product.photo}}">
                 </div>
@@ -35,7 +35,7 @@
                     <span class="product_name">{{product.name}}</span>
                     <span>{{product.quantity}} x {{product.price | currency:"$"}}</span>
                     <span>
-                        <i class="fa-solid fa-trash btn-remove" (click)="removeItem()"></i>
+                        <i class="fa-solid fa-trash btn-remove" (click)="removeItem(i)"></i>
                     </span>
                 </div>
                 <div class="col-3 product_price">

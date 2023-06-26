@@ -54,15 +54,15 @@ export class TicketCartService {
   /**
    * Get total cart
    */
-  getTotal():number {
+  getTotal(): number {
     let total = 0;
     if (typeof (Storage) !== 'undefined') {
       let cart: Product[] = JSON.parse(localStorage.getItem(TicketCartService.cartStorageName));
       if (cart) {
         cart.forEach(item => {
-          total += item.price * item.quantity;          
+          total += item.price * item.quantity;
         });
-     }
+      }
     } else {
       iziToast.error({
         title: 'Error',
@@ -70,6 +70,24 @@ export class TicketCartService {
       });
     }
     return total;
+  }
+
+  /**
+   * Remove a cart item
+   */
+  removeItem(index:number) {
+    if (typeof (Storage) !== 'undefined') {
+      let cart: Product[] = JSON.parse(localStorage.getItem(TicketCartService.cartStorageName));
+      if (cart) {
+        cart.splice(index,1);
+        localStorage.setItem(TicketCartService.cartStorageName, JSON.stringify(cart));
+      }
+    } else {
+      iziToast.error({
+        title: 'Error',
+        message: 'Navegador no compatible.',
+      });
+    }
   }
 
   /**
