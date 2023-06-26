@@ -9,7 +9,14 @@
                 <h2 class="title">Mi carrito de compras</h2>
             </div>
         </div>
-        <div class="products mt-3">
+        <div class="products mt-2">
+            <div class="row mb-1">
+                <div class="col-12 d-flex flex-row-reverse">
+                    <button type="button" class="btn btn-outline-secondary btn-sm btn-action" (click)="removeAllItems()" [disabled]="products.length<=0">
+                        Vaciar carrito
+                    </button>
+                </div>
+            </div>
             <div class="row mb-2">
                 <hr class="mt-2">
                 <div class="col-9">

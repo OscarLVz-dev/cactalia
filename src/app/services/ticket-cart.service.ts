@@ -51,4 +51,18 @@ export class TicketCartService {
     }
   }
 
+  /**
+   * Remove all cart items
+   */
+  removeAllItems() {
+    if (typeof (Storage) !== 'undefined') {
+      localStorage.removeItem(TicketCartService.cartStorageName);
+    } else {
+      iziToast.error({
+        title: 'Error',
+        message: 'Navegador no compatible.',
+      });
+    }
+  }
+
 }

@@ -67,6 +67,13 @@
     }
 
     .products {
+        .btn-action {
+            width: auto;
+            font-size: 17px;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+
         .product {
             img {
                 width: 100%;

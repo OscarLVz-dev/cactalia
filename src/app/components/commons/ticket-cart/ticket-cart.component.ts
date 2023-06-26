@@ -20,4 +20,12 @@ export class TicketCartComponent implements OnInit {
     this.products=this.ticketService.getItems();
   }
 
+  /**
+   * Remove all cart items
+   */
+  removeAllItems() {
+    this.ticketService.removeAllItems();
+    this.products=this.ticketService.getItems();
+  }
+
 }
