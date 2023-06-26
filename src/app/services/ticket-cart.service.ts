@@ -1,21 +1,32 @@
+import { Product } from '../models/product';
 import { Injectable } from '@angular/core';
+import iziToast from 'izitoast';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TicketCartService {
 
-  constructor() { }
+  public static cartStorageName:string ="cctla_crt";
 
   /**
    * Add item to cart
    */
-  addItem() {
+  addItem(item:Product) {
     if (typeof (Storage) !== 'undefined') {
-      localStorage.setItem('Nombre', 'Miguel Antonio');
-      // Código cuando Storage es compatible
+      let cart:Product[] = JSON.parse(localStorage.getItem(TicketCartService.cartStorageName));
+      if (!cart) {
+        let newCart:Product[] = [item];
+        localStorage.setItem(TicketCartService.cartStorageName, JSON.stringify(newCart));
+      } else {
+        cart.push(item);
+        localStorage.setItem(TicketCartService.cartStorageName, JSON.stringify(cart));
+      }
     } else {
-      // Código cuando Storage NO es compatible
+      iziToast.error({
+        title: 'Error',
+        message: 'Navegador no compatible.',
+      });
     }
   }
 

@@ -29,7 +29,7 @@
                                 <p class="name mt-3">{{pin.name}}</p>
                                 <p class="description" *ngIf="pin.desc">{{pin.desc}}</p>
                                 <span class="price" *ngIf="pin.price">{{pin.price | currency:"$"}}</span>
-                                <button type="button" class="add-button btn btn-outline-light mt-2 py-0" (click)="addItem()">
+                                <button type="button" class="add-button btn btn-outline-light mt-2 py-0" (click)="addItem(pin)">
                                     Añadir al carrito
                                     <i class="fa-solid fa-cart-plus"></i>
                                 </button>
