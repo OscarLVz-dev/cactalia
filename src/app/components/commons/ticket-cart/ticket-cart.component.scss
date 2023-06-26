@@ -64,6 +64,23 @@
         .title {
             color: $green-dark;
         }
+
+        .close_ticket{
+            width: auto;
+            position: absolute;
+            right: 5px;
+            
+            i{
+                font-size: 21px;
+                color: $gray-light;
+            }
+        }
+
+        .close_ticket:hover{
+            i{
+                color: $green-dark;
+            }
+        }
     }
 
     .products {
