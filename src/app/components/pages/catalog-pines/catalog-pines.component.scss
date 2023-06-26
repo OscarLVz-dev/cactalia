@@ -44,7 +44,7 @@
         color: $white;
     }
 
-    .categoryActive{
+    .categoryActive {
         border: 1px solid $purple-dark;
         background: $purple-dark;
         color: $white;
@@ -83,7 +83,7 @@
             width: 85%;
             display: flex;
             margin: auto;
-            color: $gray;            
+            color: $gray;
             font-weight: 600;
         }
 
@@ -99,7 +99,7 @@
             align-items: center;
             justify-content: center;
 
-            i{
+            i {
                 color: $green-dark;
                 margin-left: 5px;
                 font-size: 19px;
@@ -107,20 +107,31 @@
 
         }
 
-        .add-button:hover{
+        .add-button:hover {
             background: $green-dark;
             border: 1px solid $green-dark;
-            color: white;  
-            
-            i{
+            color: white;
+
+            i {
                 color: $white;
+            }
+        }
+
+        .add-button:active {
+            background: white;
+            border: 1px solid $green-dark;
+            color: $green-dark;
+
+            i {
+                color: $green-dark;
             }
         }
     }
 }
 
-.empty-box{
+.empty-box {
     text-align: center;
+
     i {
         color: $gray-light;
         font-size: 50px;
