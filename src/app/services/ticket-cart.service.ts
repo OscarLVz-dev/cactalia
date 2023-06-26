@@ -13,7 +13,7 @@ export class TicketCartService {
   /**
    * Get cart items
    */
-  getItems():Product[] {
+  getItems(): Product[] {
     if (typeof (Storage) !== 'undefined') {
       let cart: Product[] = JSON.parse(localStorage.getItem(TicketCartService.cartStorageName));
       if (!cart) {
@@ -49,6 +49,27 @@ export class TicketCartService {
         message: 'Navegador no compatible.',
       });
     }
+  }
+
+  /**
+   * Get total cart
+   */
+  getTotal():number {
+    let total = 0;
+    if (typeof (Storage) !== 'undefined') {
+      let cart: Product[] = JSON.parse(localStorage.getItem(TicketCartService.cartStorageName));
+      if (cart) {
+        cart.forEach(item => {
+          total += item.price * item.quantity;          
+        });
+     }
+    } else {
+      iziToast.error({
+        title: 'Error',
+        message: 'Navegador no compatible.',
+      });
+    }
+    return total;
   }
 
   /**

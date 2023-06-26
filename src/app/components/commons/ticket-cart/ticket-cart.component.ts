@@ -14,10 +14,11 @@ export class TicketCartComponent implements OnInit {
 
   constructor(
     private ticketService: TicketCartService,
-  ){}
-  
+  ) { }
+
   ngOnInit(): void {
-    this.products=this.ticketService.getItems();
+    this.products = this.ticketService.getItems();
+    this.total = this.ticketService.getTotal();
   }
 
   /**
@@ -25,7 +26,8 @@ export class TicketCartComponent implements OnInit {
    */
   removeAllItems() {
     this.ticketService.removeAllItems();
-    this.products=this.ticketService.getItems();
+    this.products = this.ticketService.getItems();
+    this.total = this.ticketService.getTotal();
   }
 
 }

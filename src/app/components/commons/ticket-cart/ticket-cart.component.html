@@ -33,10 +33,10 @@
                 </div>
                 <div class="col-6 product_info">
                     <span class="product_name">{{product.name}}</span>
-                    <span>1 x {{product.price | currency:"$"}}</span>
+                    <span>{{product.quantity}} x {{product.price | currency:"$"}}</span>
                 </div>
                 <div class="col-3 product_price">
-                    <span>{{product.price | currency:"$"}}</span>
+                    <span>{{product.quantity*product.price | currency:"$"}}</span>
                 </div>
             </div>
             <div *ngIf="products.length<=0" class="empty-cart mt-4 mb-5">
