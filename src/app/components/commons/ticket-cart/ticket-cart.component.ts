@@ -8,9 +8,8 @@ import { Product } from 'src/app/models/product';
 })
 export class TicketCartComponent implements OnInit {
 
-  ngOnInit(): void {
-    //Cargar productos de storage  
-  }
+  products: Product[] = [];
+  total: number = 0;
 
   product: Product = {
     name: "Pin de ranita",
@@ -20,5 +19,9 @@ export class TicketCartComponent implements OnInit {
     quantity: 1,
   };
 
-  products: Product[] = [this.product, this.product, this.product, this.product, this.product, this.product];
+  ngOnInit(): void {
+    //this.products = [this.product, this.product, this.product, this.product, this.product, this.product];
+    //Cargar productos de storage  
+  }
+
 }

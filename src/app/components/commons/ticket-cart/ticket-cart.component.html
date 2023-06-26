@@ -32,6 +32,10 @@
                     <span>{{product.price | currency:"$"}}</span>
                 </div>
             </div>
+            <div *ngIf="products.length<=0" class="empty-cart mt-4 mb-5">
+                <i class="fa-solid fa-ghost fa-beat-fade"></i>
+                <p class="mt-2">Tu carrito está vacío.</p>
+            </div>
             <hr>
         </div>
         <div class="footer mt-3">
@@ -40,11 +44,11 @@
                     <span class="columnTitle totalTitle">Total:</span>
                 </div>
                 <div class="col-4">
-                    <span class="columnTitle total">$1,250.00</span>
+                    <span class="columnTitle total">{{total | currency:"$"}}</span>
                 </div>
             </div>
             <div class="row my-3 mx-2">
-                <button type="button" class="btn btn-primary">
+                <button type="button" class="btn btn-primary" [disabled]="products.length<=0">
                     Realizar pedido
                 </button>
             </div>
