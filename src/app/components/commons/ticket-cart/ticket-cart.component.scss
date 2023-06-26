@@ -102,6 +102,15 @@
                     text-align: center;
                 }
             }
+
+            .btn-remove {
+                font-size: 12px;
+                color: $gray-light;
+            }
+
+            .btn-remove:hover {
+                color: $red-danger;
+            }
         }
 
         .empty-cart {

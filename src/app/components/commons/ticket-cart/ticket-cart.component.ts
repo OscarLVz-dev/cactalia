@@ -30,4 +30,11 @@ export class TicketCartComponent implements OnInit {
     this.total = this.ticketService.getTotal();
   }
 
+  /**
+   * Remove item cart
+   */
+  removeItem() {
+
+  }
+
 }

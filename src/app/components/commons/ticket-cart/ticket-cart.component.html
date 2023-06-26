@@ -34,6 +34,9 @@
                 <div class="col-6 product_info">
                     <span class="product_name">{{product.name}}</span>
                     <span>{{product.quantity}} x {{product.price | currency:"$"}}</span>
+                    <span>
+                        <i class="fa-solid fa-trash btn-remove" (click)="removeItem()"></i>
+                    </span>
                 </div>
                 <div class="col-3 product_price">
                     <span>{{product.quantity*product.price | currency:"$"}}</span>
