@@ -61,7 +61,7 @@
                 </div>
             </div>
             <div class="row my-3 mx-2">
-                <button type="button" class="btn btn-primary" [disabled]="products.length<=0">
+                <button type="button" class="btn btn-primary" [disabled]="products.length<=0" (click)="sendCart()">
                     Realizar pedido
                 </button>
             </div>

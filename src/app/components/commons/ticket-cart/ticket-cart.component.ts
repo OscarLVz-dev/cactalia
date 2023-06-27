@@ -33,10 +33,17 @@ export class TicketCartComponent implements OnInit {
   /**
    * Remove item cart
    */
-  removeItem(index:number) {
+  removeItem(index: number) {
     this.ticketService.removeItem(index);
     this.products = this.ticketService.getItems();
     this.total = this.ticketService.getTotal();
+  }
+
+  /**
+   * Send cart
+   */
+  sendCart() {
+    this.ticketService.sendCart();
   }
 
 }

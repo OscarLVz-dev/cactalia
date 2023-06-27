@@ -9,6 +9,7 @@ import { Styles } from '../constants/Styles';
 export class TicketCartService {
 
   public static cartStorageName: string = "cctla_crt";
+  public static readonly phone: string ="527293424619";
 
 
   /**
@@ -107,6 +108,14 @@ export class TicketCartService {
         message: 'Navegador no compatible.',
       });
     }
+  }
+
+  /**
+   * Send cart
+   */
+  sendCart() {
+    let textMessage = "Hola, Es una prueba jeje Canción"
+    window.open("https://api.whatsapp.com/send?phone="+TicketCartService.phone+"&text=" + textMessage, "_blank");
   }
 
 }
