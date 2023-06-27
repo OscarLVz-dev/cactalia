@@ -17,7 +17,8 @@ import { HoverClassDirective } from './directives/hover-class.directive';
 import { TicketCartComponent } from './components/commons/ticket-cart/ticket-cart.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
-import { PaymentsDataComponent } from './components/commons/payments-data/payments-data.component'; 
+import { PaymentsDataComponent } from './components/commons/payments-data/payments-data.component';
+import { PaymentsDataPageComponent } from './components/pages/payments-data-page/payments-data-page.component'; 
 
 @NgModule({
   declarations: [
@@ -33,6 +34,7 @@ import { PaymentsDataComponent } from './components/commons/payments-data/paymen
     HoverClassDirective,
     TicketCartComponent,
     PaymentsDataComponent,
+    PaymentsDataPageComponent,
   ],
   imports: [
     BrowserModule,
