@@ -22,12 +22,17 @@
         margin-right: 20px;
     }
 
+    .active{
+        font-weight: 800;
+        color: $gray;
+    }
+
     .dropdown {
         .dropdown-menu{
             border-radius: 15px !important;
             .dropdown-item {
                 font-size: 20px;
-                border-radius: 5px;
+                border-radius: 3px;
 
                 i{
                     width: 25%;
