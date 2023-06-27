@@ -1,6 +1,7 @@
 import { MatDialog } from '@angular/material/dialog';
 import { Component } from '@angular/core';
 import { TicketCartComponent } from './components/commons/ticket-cart/ticket-cart.component';
+import { Styles } from './constants/Styles';
 
 @Component({
   selector: 'app-root',
@@ -9,6 +10,7 @@ import { TicketCartComponent } from './components/commons/ticket-cart/ticket-car
 })
 export class AppComponent {
   title = 'cactalia';
+  public StylesConstants = Styles;
 
   constructor(public dialog: MatDialog) {}
 

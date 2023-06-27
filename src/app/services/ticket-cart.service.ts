@@ -1,6 +1,7 @@
 import { Product } from '../models/product';
 import { Injectable } from '@angular/core';
 import iziToast from 'izitoast';
+import { Styles } from '../constants/Styles';
 
 @Injectable({
   providedIn: 'root'
@@ -35,6 +36,7 @@ export class TicketCartService {
    */
   addItem(item: Product) {
     if (typeof (Storage) !== 'undefined') {
+      Styles.newElement=true;
       let cart: Product[] = JSON.parse(localStorage.getItem(TicketCartService.cartStorageName));
       if (!cart) {
         let newCart: Product[] = [item];
@@ -43,6 +45,9 @@ export class TicketCartService {
         cart.push(item);
         localStorage.setItem(TicketCartService.cartStorageName, JSON.stringify(cart));
       }
+      setTimeout(() => {
+        Styles.newElement=false;
+      }, 900);
     } else {
       iziToast.error({
         title: 'Error',
