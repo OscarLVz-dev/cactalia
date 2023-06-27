@@ -1,1 +1,58 @@
-<p>payments-data works!</p>
+<div class="row">
+    <div class="col-12 card clabes-card">
+        <h2>Cuentas de pago</h2>
+        <p class="data">Beneficiario: Natalia Osorio Hernández</p>
+        <h3 class="mt-2">Banco azteca: <span class="detail">(Solo transferencias)</span></h3>
+        <ul>
+            <li>
+                Número de tarjeta:
+                <ul>
+                    <li class="data">
+                        <span class="clabe">{{PayDataEnum.BA_card.displayValue}}</span>
+                        <button type="button" class="btn btn-outline-light" (click)="copyText(PayDataEnum.BA_card)">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Clabe:
+                <ul>
+                    <li class="data">
+                        <span class="clabe">{{PayDataEnum.BA_clabe.displayValue}}</span>
+                        <button type="button" class="btn btn-outline-light" (click)="copyText(PayDataEnum.BA_clabe)">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <h3 class="mt-4">BBVA: <span class="detail">(Transferencias y depositos OXXO)</span></h3>
+        <ul>
+            <li>
+                Número de tarjeta:
+                <ul>
+                    <li class="data">
+                        <span class="clabe">{{PayDataEnum.BBVA_card.displayValue}}</span>
+                        <button type="button" class="btn btn-outline-light" (click)="copyText(PayDataEnum.BBVA_card)">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                Clabe:
+                <ul>
+                    <li class="data">
+                        <span class="clabe">{{PayDataEnum.BBVA_clabe.displayValue}}</span>
+                        <button type="button" class="btn btn-outline-light" (click)="copyText(PayDataEnum.BBVA_clabe)">
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <img class="resource r1" src="assets/img/grafic_resources/22.png">
+        <img class="resource r2" src="assets/img/grafic_resources/11.png">
+    </div>
+</div>

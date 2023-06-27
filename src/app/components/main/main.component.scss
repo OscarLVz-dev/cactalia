@@ -11,16 +11,17 @@
     transform: translateX(-50%);
     border: 1px solid $gray-light;
 
-    .download{
+    .download {
         position: absolute;
         bottom: 15px;
         right: 25px;
+
         i {
             color: $gray;
         }
     }
 
-    .download:hover{
+    .download:hover {
         i {
             color: $green-dark;
         }
@@ -48,6 +49,7 @@
 
     .contact {
         text-align: center;
+
         a:hover {
             .text {
                 color: $green-dark;
@@ -94,102 +96,7 @@
     }
 }
 
-
-.clabes-card {
-    border: none;
-    overflow: hidden;
-    padding: 25px 25px 30px 25px;
-
-    h2 {
-        z-index: 1;
-        text-align: center;
-        color: $green-dark;
-        font-size: 40px;
-        margin: 0px;
-    }
-
-    .data {
-        text-align: center;
-        font-size: 22px;
-    }
-
-    h3 {
-        z-index: 1;
-        font-family: $font-body;
-        font-size: 25px;
-        color: $purple-dark;
-        margin: 0;
-
-        .detail {
-            font-size: 18px;
-            color: $gray;
-        }
-    }
-
-    ul {
-        z-index: 1;
-        margin: 0px;
-        padding: 0px 0px 0px 10px;
-
-        li {
-            color: $gray;
-            font-size: 22px;
-            list-style: none;
-
-            .data {
-                display: flex;
-                justify-content: space-between;
-
-                .clabe {
-                    color: $gray;
-                    margin-right: 20px;
-                }
-
-                button {
-                    border: 1px solid $gray-light;
-                    background: white;
-
-                    i {
-                        color: $gray;
-                    }
-                }
-
-                button:hover {
-                    border: 1px solid $pink-dark;
-
-                    i {
-                        color: $pink-dark;
-                    }
-                }
-
-                button:active {
-                    i {
-                        color: $pink;
-                    }
-                }
-            }
-        }
-    }
-
-    .resource {
-        position: absolute;
-        z-index: 0;
-    }
-
-    .r1 {
-        width: 25%;
-        top: 10px;
-        right: -25px;
-    }
-
-    .r2 {
-        width: 35%;
-        bottom: -40px;
-        right: 80px;
-    }
-}
-
-spotify-widget{
+spotify-widget {
     padding: 0;
 }
 
