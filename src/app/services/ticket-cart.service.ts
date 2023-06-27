@@ -113,7 +113,7 @@ export class TicketCartService {
    * Send cart
    */
   sendCart() {
-    let headerText = "----------------------------------%0A⠀⠀⠀⠀⠀⠀⠀ *_CACTALIA_*🌵 %0A----------------------------------%0A⠀⠀ *MI CARRITO DE COMPRAS*%0A%0A*PRODUCTOS:*";
+    let headerText = "----------------------------------%0A⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀ *_CACTALIA_*🌵 %0A----------------------------------%0A⠀⠀⠀⠀⠀⠀ *MI CARRITO DE COMPRAS*%0A%0A*PRODUCTOS:*";
     let products = "";
     let footer = "%0A%0A----------------------------------%0A *TOTAL:* $"+this.getTotal()+"%0A%0A ¡Hola! Te envio mi carrito de compras 🛍️😁.";
     
