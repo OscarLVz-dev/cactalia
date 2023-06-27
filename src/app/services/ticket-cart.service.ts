@@ -9,7 +9,7 @@ import { Styles } from '../constants/Styles';
 export class TicketCartService {
 
   public static cartStorageName: string = "cctla_crt";
-  public static readonly phone: string ="527293424619";
+  public static readonly phone: string ="527293412388";
 
 
   /**
@@ -114,7 +114,18 @@ export class TicketCartService {
    * Send cart
    */
   sendCart() {
-    let textMessage = "Hola, Es una prueba jeje Canción"
+    let headerText = "----------------------------------%0A⠀⠀⠀⠀⠀⠀⠀ *_CACTALIA_*🌵 %0A----------------------------------%0A⠀⠀ *MI CARRITO DE COMPRAS*%0A%0A*PRODUCTOS:*";
+    let products = "";
+    let footer = "%0A%0A----------------------------------%0A *TOTAL:* $"+this.getTotal()+"%0A%0A ¡Hola! Te envio mi carrito de compras 🛍️😁.";
+    
+    let items = this.getItems();
+    items.forEach(element => {
+      products+="%0A%0A-> *"+element.name+"*";
+      products+="%0A⠀⠀⠀"+element.quantity+" x $"+element.price+" = $"+(element.quantity*element.price)
+    });
+
+    let textMessage = headerText + products + footer;
+
     window.open("https://api.whatsapp.com/send?phone="+TicketCartService.phone+"&text=" + textMessage, "_blank");
   }
 
