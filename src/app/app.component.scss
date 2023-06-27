@@ -1,6 +1,6 @@
 @import "/src/assets/scss/colors.scss";
 
-#my_cart {
+.my_cart {
     display: block;
     position: fixed;
     bottom: 20px;
@@ -14,17 +14,36 @@
     border: 2px solid $purple-dark;
     padding: 0;
 
-    i{
+    i {
         width: 100%;
         padding: 15px;
         font-size: 25px;
     }
 }
 
-#my_cart:hover {
+.my_cart:hover {
     background-color: $purple-light;
 
-    i{
+    i {
         color: $purple-dark;
+    }
+}
+
+.active {
+    animation-name: change_color;
+    animation-duration: 500ms;
+}
+
+@keyframes change_color {
+    0% {
+        background-color: $purple-dark;
+    }
+
+    50% {
+        background-color: $purple-light;
+    }
+
+    100% {
+        background-color: $purple-dark;
     }
 }
