@@ -2,14 +2,15 @@ import { Product } from '../models/product';
 import { Injectable } from '@angular/core';
 import iziToast from 'izitoast';
 import { Styles } from '../constants/Styles';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class TicketCartService {
 
-  public static cartStorageName: string = "cctla_crt";
-  public static readonly phone: string ="527293412388";
+  public static readonly cartStorageName: string = environment.cactalia_ticket_storage_name;
+  public static readonly phone: string = environment.cactalia_phone;
 
   /**
    * Get cart items
