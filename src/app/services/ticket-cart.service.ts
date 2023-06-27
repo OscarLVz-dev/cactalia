@@ -11,7 +11,6 @@ export class TicketCartService {
   public static cartStorageName: string = "cctla_crt";
   public static readonly phone: string ="527293412388";
 
-
   /**
    * Get cart items
    */
@@ -121,7 +120,7 @@ export class TicketCartService {
     let items = this.getItems();
     items.forEach(element => {
       products+="%0A%0A-> *"+element.name+"*";
-      products+="%0A⠀⠀⠀"+element.quantity+" x $"+element.price+" = $"+(element.quantity*element.price)
+      products+="%0A⠀⠀⠀⠀⠀⠀"+element.quantity+" "+element.category+" x $"+element.price+" = $"+(element.quantity*element.price)
     });
 
     let textMessage = headerText + products + footer;

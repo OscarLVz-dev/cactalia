@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProductType } from 'src/app/constants/ProductType';
 import { GoogleAuthServiceService } from 'src/app/services/google-auth-service.service';
 import { GoogleDriveServiceService } from 'src/app/services/google-drive-service.service';
 import { TicketCartService } from 'src/app/services/ticket-cart.service';
@@ -16,6 +17,7 @@ export class CatalogPinesComponent {
   public folderSelectedQuantity: number = 0;
   public folderSelectedPines = null;
   public loading: boolean = false;
+  public ProductTypeEnum = ProductType;
 
   constructor(
     private ticketService: TicketCartService,
@@ -75,6 +77,7 @@ export class CatalogPinesComponent {
         photo: item.webContentLink,
         name: item.name,
         description: item.desc,
+        category: this.ProductTypeEnum.pin.displayName,
         price: item.price,
         quantity: 1,
       }
