@@ -54,8 +54,8 @@ export class CatalogPinesComponent {
             file.name = jsonData.name;
             file.desc = jsonData.desc;
             file.price = jsonData.price;
-            file.quantity = jsonData.price;
-            if (file.quantity > 1) {
+            file.quantity = jsonData.quantity;
+            if (file.quantity > 0) {
               this.folderSelectedQuantity++;
             }
           }
