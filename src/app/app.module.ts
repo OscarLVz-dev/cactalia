@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentsDataComponent } from './components/commons/payments-data/payments-data.component';
 import { CatalogAccesoriesComponent } from './components/pages/catalog-accesories/catalog-accesories.component';
+import { CatalogComponent } from './components/pages/catalog/catalog.component';
 
 @NgModule({
   declarations: [
@@ -35,6 +36,7 @@ import { CatalogAccesoriesComponent } from './components/pages/catalog-accesorie
     TicketCartComponent,
     PaymentsDataComponent,
     CatalogAccesoriesComponent,
+    CatalogComponent,
   ],
   imports: [
     BrowserModule,
