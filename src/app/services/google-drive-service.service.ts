@@ -16,10 +16,10 @@ export class GoogleDriveServiceService {
    * Get folders in foler by folder id
    * @returns folders
    */
-  getFoldersInFolder(bearerToken: string) {
+  getFoldersInFolder(folderId: string, bearerToken: string) {
     let params = new HttpParams();
     params = params.append('orderBy', "name");
-    params = params.append('q', "mimeType='application/vnd.google-apps.folder'and'1QIKyODXY5hQU5oDUHFTFXg660IPLLpNW' in parents");
+    params = params.append('q', "mimeType='application/vnd.google-apps.folder'and'"+folderId+"' in parents");
     params = params.append('fields', "nextPageToken,files(name,webViewLink,description,id)");
 
     const headers = new HttpHeaders({

@@ -3,6 +3,7 @@ import { ProductType } from 'src/app/constants/ProductType';
 import { GoogleAuthServiceService } from 'src/app/services/google-auth-service.service';
 import { GoogleDriveServiceService } from 'src/app/services/google-drive-service.service';
 import { TicketCartService } from 'src/app/services/ticket-cart.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'catalog-accesories-component',
@@ -27,7 +28,7 @@ export class CatalogAccesoriesComponent {
     this.loading = true;
     this.googleAuthService.getBearerToken().subscribe(response => {
       this.token = response.access_token;
-      this.googleDriveService.getFoldersInFolder(this.token).subscribe(response => {
+      this.googleDriveService.getFoldersInFolder(environment.google_drive_folder_id_accesories, this.token).subscribe(response => {
         this.folders = response.files;
         this.loading = false;
       }, error => {
