@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/main.component';
 import { CommingSoonComponent } from './components/commons/comming-soon/comming-soon.component';
 import { CatalogPinesComponent } from './components/pages/catalog-pines/catalog-pines.component';
+import { CatalogAccesoriesComponent } from './components/pages/catalog-accesories/catalog-accesories.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'pines', component: CatalogPinesComponent },
-  { path: 'accesorios', component: CatalogPinesComponent },
+  { path: 'accesorios', component: CatalogAccesoriesComponent },
   { path: 'proximamente', component: CommingSoonComponent },
 ];
 
