@@ -7,6 +7,7 @@ import { CatalogPinesComponent } from './components/pages/catalog-pines/catalog-
 const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'pines', component: CatalogPinesComponent },
+  { path: 'accesorios', component: CatalogPinesComponent },
   { path: 'proximamente', component: CommingSoonComponent },
 ];
 
