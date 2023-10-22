@@ -20,6 +20,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { PaymentsDataComponent } from './components/commons/payments-data/payments-data.component';
 import { CatalogAccesoriesComponent } from './components/pages/catalog-accesories/catalog-accesories.component';
 import { CatalogComponent } from './components/pages/catalog/catalog.component';
+import { ClothingAvailableComponent } from './components/pages/clothing-available/clothing-available.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { CatalogComponent } from './components/pages/catalog/catalog.component';
     PaymentsDataComponent,
     CatalogAccesoriesComponent,
     CatalogComponent,
+    ClothingAvailableComponent,
   ],
   imports: [
     BrowserModule,
