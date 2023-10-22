@@ -12,7 +12,7 @@
         height: 300px;
         max-height: 300px;
         border-radius: 15px;
-        background-image: url("../../../../assets/img/bar_bg.png");
+        background-image: url("../../../../assets/img/pages/catalogs/pines.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: top;
@@ -145,5 +145,12 @@
 @media only screen and (max-width: 576px) {
     section {
         margin: 12px !important;
+    }
+
+    .main-card {
+        .image-bar {
+            height: 150px;
+            max-height: 150px;
+        }
     }
 }
