@@ -9,6 +9,7 @@ const routes: Routes = [
   { path: '', component: MainComponent },
   { path: 'pines', component: CatalogPinesComponent },
   { path: 'accesorios', component: CatalogAccesoriesComponent },
+  { path: 'ropa-disponible', component: CatalogAccesoriesComponent },
   { path: 'proximamente', component: CommingSoonComponent },
 ];
 
