@@ -9,5 +9,6 @@ export const environment = {
 
     google_drive_folder_id_pines:"1QIKyODXY5hQU5oDUHFTFXg660IPLLpNW",
     google_drive_folder_id_accesories:"1jlR6up45JAVgFbI4mlhfB6hCf3mepfLJ",
+    google_drive_folder_id_available:"1R_Igz2iMSuPM5T7c9noZDt6Ic-5PkpKQ",
     
 };
