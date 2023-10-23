@@ -15,13 +15,11 @@ export class ClothingAvailableComponent {
   public token;
   public folders;
   public folderSelected;
-  public folderSelectedQuantity: number = 0;
-  public folderSelectedPines = null;
+  public posts = null;
+  public totalPosts: number = 0;
   public loading: boolean = false;
-  public ProductTypeEnum = ProductType;
 
   constructor(
-    private ticketService: TicketCartService,
     private googleDriveService: GoogleDriveServiceService,
     private googleAuthService: GoogleAuthServiceService
   ) {
@@ -45,44 +43,24 @@ export class ClothingAvailableComponent {
    */
   selectFolder(folder: any) {
     this.loading = true;
+    this.totalPosts = 0;
     this.folderSelected = folder;
-    this.folderSelectedQuantity = 0;
     this.googleDriveService.getFilesInFolder(folder.id, this.token).subscribe(response => {
       if (response.files) {
         response.files.forEach(file => {
-          if (file.description) {
-            let jsonData = JSON.parse(file.description);
-            file.name = jsonData.name;
-            file.desc = jsonData.desc;
-            file.price = jsonData.price;
-            file.quantity = jsonData.quantity;
-            if (file.quantity > 0) {
-              this.folderSelectedQuantity++;
-            }
-          }
+          this.googleDriveService.getFile(file.id, this.token).subscribe(response => {
+            let jsonData = response;
+            this.totalPosts = jsonData.posts.length;            
+            this.posts = jsonData.posts;
+          }, error => {
+            this.loading = false;
+          });
         });
       }
-      this.folderSelectedPines = response.files;
       this.loading = false;
     }, error => {
       this.loading = false;
     });
-  }
-
-  /**
-   * Add item to cart
-   */
-  addItem(item) {
-    this.ticketService.addItem(
-      {
-        photo: item.webContentLink,
-        name: item.name,
-        description: item.desc,
-        category: this.ProductTypeEnum.pin.displayName,
-        price: item.price,
-        quantity: 1,
-      }
-    );
   }
 
 }
