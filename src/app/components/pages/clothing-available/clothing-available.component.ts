@@ -28,9 +28,9 @@ export class ClothingAvailableComponent {
     this.loading = true;
     this.googleAuthService.getBearerToken().subscribe(response => {
       this.token = response.access_token;
-      this.googleDriveService.getFoldersInFolder(environment.google_drive_folder_id_pines, this.token).subscribe(response => {
+      this.googleDriveService.getFoldersInFolder(environment.google_drive_folder_id_available, this.token).subscribe(response => {
         this.folders = response.files;
-        this.loading = false;
+                this.loading = false;
       }, error => {
         this.loading = false;
       });
