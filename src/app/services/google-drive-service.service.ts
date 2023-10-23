@@ -48,4 +48,20 @@ export class GoogleDriveServiceService {
     return this.http.get<any>(this.BASE_URL, { params: params, headers: headers });
   }
 
+  /**
+   * Get file by id
+   * @returns file
+   */
+  getFile(fileId: string, bearerToken: string) {
+    let params = new HttpParams();
+    params = params.append('mimeType', "text/plain");
+
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json',
+      'Authorization': `Bearer ${bearerToken}`
+    })
+
+    return this.http.get<any>(this.BASE_URL+"/"+fileId+"/export", { params: params, headers: headers });
+  }
+
 }
