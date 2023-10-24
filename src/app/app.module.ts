@@ -21,6 +21,7 @@ import { PaymentsDataComponent } from './components/commons/payments-data/paymen
 import { CatalogAccesoriesComponent } from './components/pages/catalog-accesories/catalog-accesories.component';
 import { CatalogComponent } from './components/pages/catalog/catalog.component';
 import { ClothingAvailableComponent } from './components/pages/clothing-available/clothing-available.component';
+import { InstagramPostWidgetComponent } from './components/commons/widgets/instagram-post-widget/instagram-post-widget.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { ClothingAvailableComponent } from './components/pages/clothing-availabl
     CatalogAccesoriesComponent,
     CatalogComponent,
     ClothingAvailableComponent,
+    InstagramPostWidgetComponent,
   ],
   imports: [
     BrowserModule,
