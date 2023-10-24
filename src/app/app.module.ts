@@ -22,6 +22,7 @@ import { CatalogAccesoriesComponent } from './components/pages/catalog-accesorie
 import { CatalogComponent } from './components/pages/catalog/catalog.component';
 import { ClothingAvailableComponent } from './components/pages/clothing-available/clothing-available.component';
 import { InstagramPostWidgetComponent } from './components/commons/widgets/instagram-post-widget/instagram-post-widget.component';
+import { InstagramService } from './services/instagram.service';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,7 @@ import { InstagramPostWidgetComponent } from './components/commons/widgets/insta
     BrowserAnimationsModule,
     MatDialogModule,
   ],
-  providers: [],
+  providers: [InstagramService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
