@@ -78,7 +78,7 @@ export class CatalogAccesoriesComponent {
         photo: item.webContentLink,
         name: item.name,
         description: item.desc,
-        category: this.ProductTypeEnum.pin.displayName,
+        category: this.ProductTypeEnum.accesory.displayName,
         price: item.price,
         quantity: 1,
       }
