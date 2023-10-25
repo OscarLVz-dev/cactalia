@@ -26,7 +26,7 @@
                         <div class="col-12 col-sm-6 col-lg-4 mb-3" *ngFor="let post of posts" [hidden]="post.quantity<=0">
                             <div class="pin-card shadow pb-3">
                                 <instagram-post-widget post_id="{{post.id}}"></instagram-post-widget>
-                                <button type="button" class="add-button btn btn-outline-light mt-4 py-0">
+                                <button type="button" class="add-button btn btn-outline-light mt-4 py-0" (click)="addItem(post)">
                                     Añadir al carrito
                                     <i class="fa-solid fa-cart-plus"></i>
                                 </button>

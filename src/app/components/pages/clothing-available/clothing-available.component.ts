@@ -18,8 +18,10 @@ export class ClothingAvailableComponent {
   public posts = null;
   public totalPosts: number = 0;
   public loading: boolean = false;
+  public ProductTypeEnum = ProductType;
 
   constructor(
+    private ticketService: TicketCartService,
     private googleDriveService: GoogleDriveServiceService,
     private googleAuthService: GoogleAuthServiceService
   ) {
@@ -61,6 +63,22 @@ export class ClothingAvailableComponent {
     }, error => {
       this.loading = false;
     });
+  }
+
+  /**
+   * Add item to cart
+   */
+  addItem(item) {
+    this.ticketService.addItem(
+      {
+        photo: null,
+        name: item.nombre,
+        description: null,
+        category: this.ProductTypeEnum.clothes.displayName,
+        price: item.precio,
+        quantity: 1,
+      }
+    );
   }
 
 }
