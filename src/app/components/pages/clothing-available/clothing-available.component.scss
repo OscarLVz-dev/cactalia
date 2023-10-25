@@ -1,6 +1,17 @@
 @import "/src/assets/scss/colors.scss";
 @import "/src/assets/scss/fonts.scss";
 
+/**
+IMPORTANT! Required in main scss for responsive and small screens
+
+iframe.instagram-media {
+    max-width: 100% !important;
+    width: 100% !important;
+    min-width: auto !important;
+}
+
+**/
+
 .main-card {
     background: white;
     border-radius: 15px;
