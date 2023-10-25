@@ -71,7 +71,7 @@ export class ClothingAvailableComponent {
   addItem(item) {
     this.ticketService.addItem(
       {
-        photo: null,
+        photo: "../../../../assets/img/pages/ticket/base.png",
         name: item.nombre,
         description: null,
         category: this.ProductTypeEnum.clothes.displayName,
