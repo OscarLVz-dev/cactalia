@@ -18,6 +18,10 @@ $fa-font-path: "./assets/fontawesome/webfonts";
 //IziToast
 @import "./assets/scss/iziToast.scss";
 
+//SweetAlert
+@import "./assets/scss/sweetAlert.scss";
+
+
 * {
     font-family: $font-body;
     color: white;
