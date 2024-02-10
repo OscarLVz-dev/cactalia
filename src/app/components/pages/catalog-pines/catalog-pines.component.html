@@ -25,7 +25,7 @@
                     <div class="row mt-4" *ngIf="folderSelectedQuantity > 0">
                         <div class="col-12 col-md-3 mb-3" *ngFor="let pin of folderSelectedPines" [hidden]="pin.quantity<=0">
                             <div class="pin-card shadow pb-3" *ngIf="pin.quantity>0">
-                                <img class="mt-4 mb-1" src="{{pin.webContentLink}}">
+                                <img class="mt-4 mb-1" src="https://lh3.googleusercontent.com/d/{{pin.id}}">
                                 <p class="name mt-3">{{pin.name}}</p>
                                 <p class="description" *ngIf="pin.desc">{{pin.desc}}</p>
                                 <span class="price" *ngIf="pin.price">{{pin.price | currency:"$"}}</span>
