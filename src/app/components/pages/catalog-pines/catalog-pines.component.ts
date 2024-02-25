@@ -75,7 +75,7 @@ export class CatalogPinesComponent {
   addItem(item) {
     this.ticketService.addItem(
       {
-        photo: item.webContentLink,
+        photo: "https://lh3.googleusercontent.com/d/"+item.id,
         name: item.name,
         description: item.desc,
         category: this.ProductTypeEnum.pin.displayName,
