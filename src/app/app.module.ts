@@ -23,6 +23,7 @@ import { CatalogComponent } from './components/pages/catalog/catalog.component';
 import { ClothingAvailableComponent } from './components/pages/clothing-available/clothing-available.component';
 import { InstagramPostWidgetComponent } from './components/commons/widgets/instagram-post-widget/instagram-post-widget.component';
 import { InstagramService } from './services/instagram.service';
+import { CatalogFundasComponent } from './components/pages/catalog-fundas/catalog-fundas.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { InstagramService } from './services/instagram.service';
     CatalogComponent,
     ClothingAvailableComponent,
     InstagramPostWidgetComponent,
+    CatalogFundasComponent,
   ],
   imports: [
     BrowserModule,
