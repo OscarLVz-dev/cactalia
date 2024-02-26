@@ -1,0 +1,156 @@
+@import "/src/assets/scss/colors.scss";
+@import "/src/assets/scss/fonts.scss";
+
+.main-card {
+    background: white;
+    border-radius: 15px;
+
+    .image-bar {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 300px;
+        max-height: 300px;
+        border-radius: 15px;
+        background-image: url("../../../../assets/img/pages/catalogs/accesories.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+    }
+}
+
+.catalog {
+    background: white;
+    border-radius: 15px;
+
+    h1 {
+        color: $green-dark;
+        font-size: 40px;
+        margin: 0;
+    }
+
+    .category {
+        border: 1px solid $gray-light;
+        background: none;
+        color: $gray;
+        font-size: 22px;
+        border-radius: 20px;
+        margin-right: 10px;
+    }
+
+    .category:hover {
+        border: 1px solid $purple-dark;
+        background: $purple-dark;
+        color: $white;
+    }
+
+    .categoryActive {
+        border: 1px solid $purple-dark;
+        background: $purple-dark;
+        color: $white;
+    }
+
+    .pin-card {
+        border: 1px solid $gray-light;
+
+        img {
+            border: 1px solid $gray-light;
+            width: 85%;
+            display: flex;
+            margin: auto;
+        }
+
+        .name {
+            font-weight: bold;
+            font-size: 25px;
+            width: 85%;
+            display: flex;
+            margin: auto;
+            color: $gray;
+            line-height: 19px;
+        }
+
+        .description {
+            font-size: 19px;
+            width: 85%;
+            display: flex;
+            margin: auto;
+            color: $gray;
+        }
+
+        .price {
+            font-size: 19px;
+            width: 85%;
+            display: flex;
+            margin: auto;
+            color: $gray;
+            font-weight: 600;
+        }
+
+        .add-button {
+            width: 85%;
+            display: flex;
+            margin: auto;
+            border: 1px solid $gray-light;
+            background: white;
+            color: $gray;
+            font-size: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            i {
+                color: $green-dark;
+                margin-left: 5px;
+                font-size: 19px;
+            }
+
+        }
+
+        .add-button:hover {
+            background: $green-dark;
+            border: 1px solid $green-dark;
+            color: white;
+
+            i {
+                color: $white;
+            }
+        }
+
+        .add-button:active {
+            background: white;
+            border: 1px solid $green-dark;
+            color: $green-dark;
+
+            i {
+                color: $green-dark;
+            }
+        }
+    }
+}
+
+.empty-box {
+    text-align: center;
+
+    i {
+        color: $gray-light;
+        font-size: 50px;
+    }
+
+    p {
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    section {
+        margin: 12px !important;
+    }
+
+    .main-card {
+        .image-bar {
+            height: 150px;
+            max-height: 150px;
+        }
+    }
+}
