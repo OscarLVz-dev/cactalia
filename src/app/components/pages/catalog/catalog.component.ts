@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { Catalog } from 'src/app/constants/Catalog';
-import { ProductType } from 'src/app/constants/ProductType';
 import { GoogleAuthServiceService } from 'src/app/services/google-auth-service.service';
 import { GoogleDriveServiceService } from 'src/app/services/google-drive-service.service';
 import { TicketCartService } from 'src/app/services/ticket-cart.service';
@@ -21,7 +20,6 @@ export class CatalogComponent {
   public folderSelectedQuantity: number = 0;
   public folderSelectedPines = null;
   public loading: boolean = false;
-  public ProductTypeEnum = ProductType;
 
   //Fullpage image vars
   showImageFull: boolean = false;
