@@ -2,18 +2,17 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { MainComponent } from './components/main/main.component';
 import { CommingSoonComponent } from './components/commons/comming-soon/comming-soon.component';
-import { CatalogPinesComponent } from './components/pages/catalog-pines/catalog-pines.component';
-import { CatalogAccesoriesComponent } from './components/pages/catalog-accesories/catalog-accesories.component';
 import { ClothingAvailableComponent } from './components/pages/clothing-available/clothing-available.component';
-import { CatalogFundasComponent } from './components/pages/catalog-fundas/catalog-fundas.component';
+import { CatalogComponent } from './components/pages/catalog/catalog.component';
+import { Catalog } from './constants/Catalog';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
   
   //Catalogs
-  { path: 'pines', component: CatalogPinesComponent },
-  { path: 'accesorios', component: CatalogAccesoriesComponent },
-  { path: 'fundas', component: CatalogFundasComponent },
+  { path: Catalog.pines.displayName,        component: CatalogComponent },
+  { path: Catalog.accesorios.displayName,   component: CatalogComponent },
+  { path: Catalog.fundas.displayName,        component: CatalogComponent },
 
   //Instagram
   { path: 'ropa-disponible', component: ClothingAvailableComponent },

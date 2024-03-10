@@ -1,9 +1,10 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { Catalog } from 'src/app/constants/Catalog';
 import { ProductType } from 'src/app/constants/ProductType';
 import { GoogleAuthServiceService } from 'src/app/services/google-auth-service.service';
 import { GoogleDriveServiceService } from 'src/app/services/google-drive-service.service';
 import { TicketCartService } from 'src/app/services/ticket-cart.service';
-import { environment } from 'src/environments/environment';
 
 
 @Component({
@@ -13,6 +14,7 @@ import { environment } from 'src/environments/environment';
 })
 export class CatalogComponent {
 
+  public catalog: Catalog;
   public token;
   public folders;
   public folderSelected;
@@ -27,14 +29,17 @@ export class CatalogComponent {
   showImagesFiles: Array<object> = [];
 
   constructor(
+    private router: Router,
     private ticketService: TicketCartService,
     private googleDriveService: GoogleDriveServiceService,
     private googleAuthService: GoogleAuthServiceService
   ) {
+    this.catalog = Catalog[this.router.url.replace("/","")];
+    
     this.loading = true;
     this.googleAuthService.getBearerToken().subscribe(response => {
       this.token = response.access_token;
-      this.googleDriveService.getFoldersInFolder(environment.google_drive_folder_id_pines, this.token).subscribe(response => {
+      this.googleDriveService.getFoldersInFolder(this.catalog.googleDriveFolderId, this.token).subscribe(response => {
         this.folders = response.files;
         this.loading = false;
       }, error => {
@@ -84,7 +89,7 @@ export class CatalogComponent {
         photo: "https://lh3.googleusercontent.com/d/"+item.id,
         name: item.name,
         description: item.desc,
-        category: this.ProductTypeEnum.pin.displayName,
+        category: this.catalog.productName,
         price: item.price,
         quantity: 1,
       }
