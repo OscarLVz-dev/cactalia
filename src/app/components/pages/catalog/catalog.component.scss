@@ -60,6 +60,25 @@
             margin: auto;
         }
 
+        .img-container {
+            display: flex;
+            position: relative;
+            width: 100%;
+            .zoom-icon {
+                color: $purple-dark;
+                text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+                font-size: 25px;
+                position: absolute;
+                right: 11%;
+                bottom: 12px;
+            }
+    
+            .zoom-icon:hover {
+                color: $purple-dark;
+                font-size: 25px;
+            }
+        }
+
         .name {
             font-weight: bold;
             font-size: 25px;
