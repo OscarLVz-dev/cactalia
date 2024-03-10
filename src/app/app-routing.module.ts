@@ -9,10 +9,16 @@ import { CatalogFundasComponent } from './components/pages/catalog-fundas/catalo
 
 const routes: Routes = [
   { path: '', component: MainComponent },
+  
+  //Catalogs
   { path: 'pines', component: CatalogPinesComponent },
   { path: 'accesorios', component: CatalogAccesoriesComponent },
-  { path: 'ropa-disponible', component: ClothingAvailableComponent },
   { path: 'fundas', component: CatalogFundasComponent },
+
+  //Instagram
+  { path: 'ropa-disponible', component: ClothingAvailableComponent },
+
+  //Others
   { path: 'proximamente', component: CommingSoonComponent },
 ];
 
