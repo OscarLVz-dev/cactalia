@@ -27,7 +27,7 @@
                     <ng-image-fullscreen-view [images]="showImagesFiles" [imageIndex]="selectedImageIndex" [show]="showImageFull" (close)="closeFullImageView()"></ng-image-fullscreen-view>
 
                     <div class="row mt-4" *ngIf="folderSelectedQuantity > 0">
-                        <div class="col-12 col-md-3 mb-3" *ngFor="let pin of folderSelectedPines" [hidden]="pin.quantity<=0">
+                        <div class="col-12 col-md-3 mb-3" *ngFor="let pin of folderSelectedPines" [hidden]="pin.quantity<=0 || !pin.description">
                             <div class="pin-card shadow pb-3" *ngIf="pin.quantity>0">
                                 <img class="mt-4 mb-1" src="https://lh3.googleusercontent.com/d/{{pin.id}}" (click)="openFullImageView(0, pin)">
                                 <p class="name mt-3">{{pin.name}}</p>
