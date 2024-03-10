@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Catalog } from 'src/app/constants/Catalog';
 
 @Component({
   selector: 'navbar-component',
@@ -7,5 +8,6 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  public catalogs = Catalog;
   
 }
