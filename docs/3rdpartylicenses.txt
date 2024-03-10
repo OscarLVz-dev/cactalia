@@ -296,6 +296,9 @@ Apache-2.0
 jsrsasign
 MIT
 
+ng-image-fullscreen-view
+MIT
+
 rxjs
 Apache-2.0
                                Apache License
