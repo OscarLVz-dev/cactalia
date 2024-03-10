@@ -24,6 +24,7 @@ import { ClothingAvailableComponent } from './components/pages/clothing-availabl
 import { InstagramPostWidgetComponent } from './components/commons/widgets/instagram-post-widget/instagram-post-widget.component';
 import { InstagramService } from './services/instagram.service';
 import { CatalogFundasComponent } from './components/pages/catalog-fundas/catalog-fundas.component';
+import { NgImageFullscreenViewModule } from 'ng-image-fullscreen-view';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { CatalogFundasComponent } from './components/pages/catalog-fundas/catalo
     HttpClientModule,
     BrowserAnimationsModule,
     MatDialogModule,
+    NgImageFullscreenViewModule,
   ],
   providers: [InstagramService],
   bootstrap: [AppComponent]

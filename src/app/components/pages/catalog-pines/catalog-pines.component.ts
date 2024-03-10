@@ -20,6 +20,11 @@ export class CatalogPinesComponent {
   public loading: boolean = false;
   public ProductTypeEnum = ProductType;
 
+  //Fullpage image vars
+  showImageFull: boolean = false;
+  selectedImageIndex: number = -1;
+  showImagesFiles: Array<object> = [];
+
   constructor(
     private ticketService: TicketCartService,
     private googleDriveService: GoogleDriveServiceService,
@@ -83,6 +88,34 @@ export class CatalogPinesComponent {
         quantity: 1,
       }
     );
+  }
+
+  /**
+   * Open full image view
+   * @param index to start
+   * @param item to get image
+   */
+  openFullImageView(index, item) {
+    this.selectedImageIndex = index;
+    this.showImageFull = true;
+    this.showImagesFiles = [];
+
+    this.showImagesFiles.push(
+      {
+        image: "https://lh3.googleusercontent.com/d/" + item.id,
+        alt: item.name,
+        title:item.name
+      }
+    );
+  }
+
+  /**
+   * Close full image view
+   */
+  closeFullImageView() {
+    this.selectedImageIndex = -1;
+    this.showImageFull = false;
+    this.showImagesFiles = [];
   }
 
 }
